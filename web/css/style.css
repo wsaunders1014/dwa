@@ -43,6 +43,7 @@ body {
   background: url(../img/bg.jpg) no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-color: #9fafca;
   height: 100%;
   font-family: 'Gotham';
   -webkit-font-smoothing: antialiased;
@@ -89,7 +90,8 @@ header.flipped .flipper {
 header {
   z-index: 1000;
   height: 10.8vw;
-  position: relative;
+  position: fixed;
+  width: 100%;
   transform: rotateX(0deg);
   transition: height 0.6s;
 }
@@ -148,55 +150,174 @@ header .back {
   bottom: 0;
 }
 header .back .logo {
-  background: url(../img/dwa_logo.png) no-repeat;
+  background: url(../img/dwa_horizontal.png) no-repeat;
   background-size: 100% auto;
   width: 0px;
-  height: 38.3%;
-  padding-left: 4%;
-  top: 8%;
-  position: absolute;
-  left: 7.54%;
+  height: 100%;
+  padding-left: 22vw;
+  top: 0%;
+  position: relative;
+  background-position: 50%;
+  margin-left: 7.54vw;
+  display: inline-block;
 }
 header .back .logo a {
   display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+header .back .film-menu {
+  display: inline-block;
+  margin-left: 6vw;
+  line-height: 6vw;
+  vertical-align: top;
+  font-weight: 800;
+  color: #092e6e;
+  width: 25vw;
+  font-size: 1.3vw;
+  letter-spacing: 4px;
+  margin-right: 4vw;
+}
+header .back .film-menu > div {
+  display: inline-block;
+  margin-right: 2vw;
+  cursor: pointer;
+}
+header .back .film-menu > div:last-child {
+  margin: 0;
+}
+header .back .film-menu > div.active {
+  color: #f1b208;
 }
 header .back .text {
-  color: #092e6e;
-  position: absolute;
+  color: #b3b3b3;
+  position: relative;
+  display: inline-block;
+  line-height: 6vw;
+  vertical-align: top;
 }
 header .back .text.fyc {
-  font-weight: bold;
-  left: 40.5%;
-  top: 56.1%;
-  font-size: 1.97vw;
+  font-weight: 800;
+  font-size: 1.4vw;
 }
 header .back .text.awards {
-  left: 40.5%;
-  top: 25%;
-  font-size: 2vw;
-  font-weight: 300;
+  font-size: 1.3vw;
+  font-weight: 400;
+  margin-right: 0.3v%;
 }
 .content {
   overflow-y: auto;
   position: relative;
-  height: calc(100% - 10.8vw);
+  height: 100%;
   text-align: center;
   transition: height 0.6s;
 }
-.content.flipped {
-  height: calc(100% - 6vw);
-}
 .content .page {
   width: 100%;
-  min-height: 100%;
+  min-height: calc(100% - 6vw);
   position: absolute;
   top: 0;
+  padding-top: 6vw;
   display: none;
+}
+.content .page .logo {
+  height: 0;
+  margin-left: 8%;
+  margin-top: 3%;
+}
+.content .page .col {
+  position: relative;
+  float: left;
+  margin-top: 1%;
+}
+.content .page .col.left {
+  width: 19%;
+  margin-left: 4%;
+}
+.content .page .col.left .menu {
+  width: 59%;
+  margin: 0 auto;
+}
+.content .page .col.left .menu .nav {
+  color: #092e6e;
+  font-weight: 800;
+  font-size: 1vw;
+}
+.content .page .col.left .menu .nav > li.current {
+  padding-left: 8%;
+}
+.content .page .col.left .menu .nav > li.current:before {
+  content: "";
+  background: #092e6e;
+  width: 4%;
+  height: 0.7em;
+  top: 7%;
+  left: 0;
+  display: block;
+  position: absolute;
+}
+.content .page .col.left .menu .nav li {
+  cursor: pointer;
+  line-height: 1.4em;
+  position: relative;
+}
+.content .page .col.left .menu .nav li.current {
+  color: #f1b208;
+}
+.content .page .col.left .menu .nav li.current .sub-nav {
+  display: block;
+  color: #092e6e;
+  font-size: 0.9em;
+}
+.content .page .col.left .menu .nav li.current .sub-nav > li.current {
+  color: #f1b208;
+}
+.content .page .col.left .menu .nav .sub-nav {
+  display: none;
+}
+.content .page .col.right {
+  width: 65%;
+}
+.content .page .col.right > div {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.content .page .col.right .filmmakers {
+  display: block;
+}
+.content .page .col.right .filmmakers > div {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.content .page .col.right .filmmakers > div:first-child {
+  display: block;
+}
+.content .page .col.right .filmmakers .maker-photo {
+  width: 30%;
+  display: inline-block;
+}
+.content .page .col.right .filmmakers .bio {
+  font-size: 1.1vw;
+  display: inline-block;
+  width: 60%;
+  text-align: left;
+  color: #1a3464;
+  margin-left: 3%;
+}
+.content .page .col.right .filmmakers .bio h4 {
+  margin-top: 1%;
 }
 .content .home {
   overflow: hidden;
-  height: 100%;
+  min-height: calc(100% - 10.8vw);
   display: block;
+  padding-top: 10.8vw;
 }
 .content .home h3 {
   color: #fff;
@@ -206,7 +327,7 @@ header .back .text.awards {
   text-shadow: 1px 1px 1px #00000075;
 }
 .content .home .poster {
-  height: 76%;
+  height: 45vw;
   margin-top: 2%;
   display: inline-block;
   box-shadow: 8px 12px 24px 0px #0000007d;
@@ -225,10 +346,7 @@ header .back .text.awards {
   background-position: bottom;
 }
 .content .bilby .logo {
-  height: 0;
-  margin-left: 8%;
   width: 10%;
-  margin-top: 3%;
   padding-top: 6%;
   background: url(../img/bilby/bilby-tt.png) no-repeat;
   background-size: 100%;
@@ -252,17 +370,23 @@ header .back .text.awards {
   font-weight: 800;
   font-size: 1vw;
 }
+.content .bilby .col.left .menu .nav > li.current {
+  padding-left: 8%;
+}
 .content .bilby .col.left .menu .nav > li.current:before {
   content: "";
   background: #092e6e;
   width: 4%;
-  height: 11px;
-  display: inline-block;
-  margin-right: 4%;
+  height: 1em;
+  top: 4%;
+  left: 0;
+  display: block;
+  position: absolute;
 }
 .content .bilby .col.left .menu .nav li {
   cursor: pointer;
   line-height: 1.4em;
+  position: relative;
 }
 .content .bilby .col.left .menu .nav li.current {
   color: #f1b208;
@@ -275,14 +399,29 @@ header .back .text.awards {
 .content .bilby .col.left .menu .nav li.current .sub-nav > li.current {
   color: #f1b208;
 }
-.content .bilby .col.left .menu .nav li.current .sub-nav > li {
-  padding: 0 0 0 8%;
-}
 .content .bilby .col.left .menu .nav .sub-nav {
   display: none;
 }
 .content .bilby .col.right {
   width: 65%;
+}
+.content .bilby .col.right > div {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.content .bilby .col.right .filmmakers {
+  display: block;
+}
+.content .bilby .col.right .filmmakers > div {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.content .bilby .col.right .filmmakers > div:first-child {
+  display: block;
 }
 .content .bilby .col.right .filmmakers .maker-photo {
   width: 30%;
@@ -298,4 +437,19 @@ header .back .text.awards {
 }
 .content .bilby .col.right .filmmakers .bio h4 {
   margin-top: 1%;
+}
+.content .bird-karma {
+  background: url(../img/bird-karma/bk-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+.content .bird-karma .logo {
+  margin-left: 7%;
+  width: 25%;
+  padding-top: 6%;
+  background: url(../img/bird-karma/bird-karma_tt2.png) no-repeat;
+  background-size: 100%;
+}
+.content .bird-karma .col.right .filmmakers .bio {
+  vertical-align: top;
 }
