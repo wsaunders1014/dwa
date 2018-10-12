@@ -216,7 +216,7 @@ header{
 			
 			> div {
 				display: inline-block;
-				margin-right:2vw;
+				margin-right:3.1vw;
 				cursor: pointer;
 				&:last-child{
 					margin: 0;
@@ -241,20 +241,20 @@ header{
 			&.awards{
 				font-size:1.3vw;
 				font-weight:400;
-				margin-right:0.3v%;
+				margin-right:0.3vw;
+				letter-spacing: 0.1vw;
 			}
 		}
 	}
 }
 .content{
-	overflow-y: auto;
 	position: relative;
-	//height:~'calc(100% - 10.8vw)';
+	
 	height:100%;
 	text-align:center;
 	transition: height 0.6s;
 	&.flipped{
-		//height:~'calc(100% - 6vw)';
+		
 	}
 	.page{
 		width: 100%;
@@ -263,104 +263,195 @@ header{
 		top: 0;
 		padding-top:6vw;
 		display: none;
-		.logo{
-		    height: 0;
-		    margin-left: 8%;
-		    margin-top: 3%;
-		    
+		
+		.static{
+			position: absolute;
+		    width: 30vw;
+		    margin-left: 6vw;
+		    margin-top: 29px;
+		    z-index: 1000;
+		    display: none;
+		    .logo{
+			    height: 0; 
+			}
 		}
-		.col{
+		.subpage{
+		    position: absolute;
+    		width: 100%;
+    		top: 6vw;
+    		z-index: 1;
+    		transform:translateY(100%);
+    		transition: transform 0.6s;
+    		overflow-y:auto;
+    		&.on,&.alwaysOn{
+    			transform:translateY(0%);
+    		}
+    		&.landing{
+
+    		}
+    		&.photos{
+    			overflow: hidden;
+				max-height:~'calc(100% - 6vw)';
+    			.slider{
+    				height: 100%;
+    				text-align:left;
+    				position: absolute;
+    				top: 0;
+    				background:#000;
+    				img{
+    					float: left;
+    				}
+    				.slide {
+    					float: left;
+    					
+					    height: 100%;
+					    background-size: cover;
+					    background-repeat: no-repeat;
+					    background-position: 50%;
+    				}
+
+    			}
+    			.arrow{
+    				width: 20px;
+    				height: 20px;
+    				position: absolute;
+    				bottom: 36px;
+    				background-size:cover;
+    				cursor: pointer;
+    				&.disabled{
+    					display: none;
+    				}
+    				&.left{
+    					background-image:url(../img/left-arrow.png);
+    					right: 92px;
+    				}
+    				&.right{
+    					background-image:url(../img/right-arrow.png);
+    					right:38px;
+    				}
+    			}
+    			.number{
+    				background:@blue;
+				    height: 30px;
+				    width: 20px;
+				    line-height: 30px;
+				    color: #fff;
+				    position: absolute;
+				    right: 65px;
+				    bottom: 30px;
+				    font-weight:bold;
+    			}
+    		}
+    		&.videos{
+    			z-index: 1001;
+    			top: 0;
+    			height: 100%;
+    			width: 100%;
+    			background:#000;
+    			video{
+    				height: auto;
+    				width: 100%;
+    				display: block;
+    				position: absolute;
+    				top: 50%;
+    				transform:translateY(-50%);
+    			}
+    			.close-btn{
+    				position: absolute;
+    				right: 2vw;
+    				top: 2vw;
+    				font-size:5vw;
+    				color: #fff;
+				    transform: rotate(45deg);
+				    cursor: pointer;
+				    &:hover{
+				    	color: @yellow;
+				    }
+    			}
+    		}
+		}
+		.left.col{
 			position: relative;
-			float: left;
-			margin-top: 1%;
-			&.left{
-				width: 19%;
-				margin-left: 4%;
+		    padding-left: 7%;
+			.menu{
 				
-				.menu{
-					width:59%;
-					margin:0 auto;
-					.nav{
-						color:@blue;
-						font-weight:800;
-						font-size:1vw;
-						> li.current{
-							padding-left:8%;
-							&:before{
-								content:"";
-								background: @blue;
-							    width: 4%;
-							    height: 0.7em;
-							    top: 7%;
-							    left: 0;
-							    display: block;
-							   	position: absolute;
-							}
+				.nav{
+					color:@blue;
+					font-weight:800;
+					font-size:1vw;
+					letter-spacing: 0.1vw;
+					> li.current{
+						padding-left:5%;
+						&:before{
+							content:"";
+							background: @blue;
+						    width: 2%;
+						    height: 1em;
+						    top: 0.2em;
+						    left: 0;
+						    display: block;
+						   	position: absolute;
 						}
-						li{
-							cursor: pointer;
-							line-height:1.4em;
-							position: relative;
-							&.current{
-								color:@yellow;
-								
-								
-								.sub-nav{
-									display: block;
-									color: @blue;
-									font-size:0.9em;
-									> li.current{
-										color:@yellow;
-										
-									}
-									> li {
-									    
-									}
+					}
+					li{
+						cursor: pointer;
+						line-height:1.4em;
+						position: relative;
+						margin-bottom:3px;
+						&.current{
+							color:@yellow;
+							
+							
+							.sub-nav{
+								display: block;
+								color: @blue;
+								font-size:0.9em;
+								> li.current{
+									color:@yellow;
+									
+								}
+								> li {
+								    
 								}
 							}
 						}
-						.sub-nav{
-							display: none;
-						}
 					}
-				}
-				
-			}
-			&.right{
-				width: 65%;
-				> div{
-					display: none;
-					position: absolute;
-					top: 0;
-					width: 100%;
-				}
-				.filmmakers{
-					display: block;
-					>div{
+					.sub-nav{
 						display: none;
-						position: absolute;
-						top:0;
-						width: 100%;
 					}
-					>div:first-child{
-						display: block;
-					}
-					.maker-photo{
-						width:30%;
-						display: inline-block;
+				}
+			}
+		}
+		.col.right{
+			width: 67%;
+		    position: absolute;
+		    top: 19%;
+		    right: 5vw;
+			> div{
+				display: none;
+				position: absolute;
+				&:first-child{
+					display: block;
+				}
+			
+		
+				
+				.maker-photo{
+					width:30%;
+					display: inline-block;
 
+				}
+				.bio{
+					font-size:1.1vw;
+					h4{
+						margin-top:1%;
 					}
-					.bio{
-						font-size:1.1vw;
-						h4{
-							margin-top:1%;
-						}
-						display: inline-block;
-						width: 60%;
-						text-align:left;
-						color: #1a3464;
-					    margin-left: 3%;
-					}
+					display: inline-block;
+					width: 66%;
+					text-align:left;
+					color: #1a3464;
+				    margin-left: 3%;
+				    padding-bottom:10%;
 				}
 			}
 		}
@@ -384,6 +475,7 @@ header{
 			box-shadow:8px 12px 24px 0px #0000007d;
 			transition: transform 1s;
 			cursor: pointer;
+
 			&#bird-karma{
 				margin-right: 7%;
 			}
@@ -393,127 +485,204 @@ header{
 		}
 	}
 	.bilby{
-		background: url(../img/bilby/bilby-bg.jpg) no-repeat;
-		background-size:cover;
-		background-position:bottom;
-		.logo{
-		    width: 10%;
-		    padding-top: 6%;
-		    background: url(../img/bilby/bilby-tt.png) no-repeat;
-		    background-size: 100%;
-		    background-position: 50%;
-		}
-		.col{
-			position: relative;
-			float: left;
-			margin-top: 1%;
-			&.left{
-				width: 19%;
-				margin-left: 4%;
-				
+		.static{
+			margin-left:8vw;
+			.logo{
+			    width: 46%;
+			    padding-top: 30%;
+			    background: url(../img/bilby/bilby-tt.png) no-repeat;
+			    background-size: 100%;
+			    background-position: 50%;
+			}
+			.left.col{
+				padding-left:0;
 				.menu{
-					width:59%;
-					margin:0 auto;
-					.nav{
-						color:@blue;
-						font-weight:800;
-						font-size:1vw;
-						> li.current{
-							padding-left:8%;
-							&:before{
-								content:"";
-								background: @blue;
-							    width: 4%;
-							    height: 1em;
-							    top: 4%;
-							    left: 0;
-							    display: block;
-							   	position: absolute;
-							}
-						}
-						li{
-							cursor: pointer;
-							line-height:1.4em;
-							position: relative;
-							&.current{
-								color:@yellow;
-								
-								
-								.sub-nav{
-									display: block;
-									color: @blue;
-									font-size:0.9em;
-									> li.current{
-										color:@yellow;
-										
-									}
-									> li {
-									    
-									}
-								}
-							}
-						}
-						.sub-nav{
-							display: none;
-						}
-					}
-				}
-				
-			}
-			&.right{
-				width: 65%;
-				> div{
-					display: none;
-					position: absolute;
-					top: 0;
-					width: 100%;
-				}
-				.filmmakers{
-					display: block;
-					>div{
-						display: none;
-						position: absolute;
-						top:0;
-						width: 100%;
-					}
-					>div:first-child{
-						display: block;
-					}
-					.maker-photo{
-						width:30%;
-						display: inline-block;
-
-					}
-					.bio{
-						font-size:1.1vw;
-						h4{
-							margin-top:1%;
-						}
-						display: inline-block;
-						width: 60%;
-						text-align:left;
-						color: #1a3464;
-					    margin-left: 3%;
+					.nav > li.current:before{
+						
 					}
 				}
 			}
 		}
+		
+		.subpage{
+			background: url(../img/bilby/landing-bg.jpg) no-repeat;
+			background-size:cover;
+			background-position:bottom;
+			min-height: ~'calc(100% - 6vw)';
+		}
+		.landing{
+			background: url(../img/bilby/landing-bg.jpg) no-repeat;
+			background-size:cover;
+			background-position:bottom;
+			.laurels{
+				position: absolute;
+				width: 44%;
+			    right: 5vw;
+			    top: 7%;
+			}
+		}
+		.filmmakers{
+			background: url(../img/bilby/bilby-bg.jpg) no-repeat;
+			background-size:cover;
+			background-position:bottom;
+		}
+		.photos{
+			.slider{
+				width:300%;
+				.slide{
+					width: 33.333%;
+				}
+			}
+		}
+		.videos{
+
+		}
+		// .col{
+		// 	position: relative;
+		// 	float: left;
+		// 	margin-top: 1%;
+		// 	&.left{
+		// 		width: 19%;
+		// 		margin-left: 4%;
+				
+		// 		.menu{
+		// 			width:59%;
+		// 			margin:0 auto;
+		// 			.nav{
+		// 				color:@blue;
+		// 				font-weight:800;
+		// 				font-size:1vw;
+		// 				> li.current{
+		// 					padding-left:8%;
+		// 					&:before{
+		// 						content:"";
+		// 						background: @blue;
+		// 					    width: 4%;
+		// 					    height: 1em;
+		// 					    top: 4%;
+		// 					    left: 0;
+		// 					    display: block;
+		// 					   	position: absolute;
+		// 					}
+		// 				}
+		// 				li{
+		// 					cursor: pointer;
+		// 					line-height:1.4em;
+		// 					position: relative;
+		// 					&.current{
+		// 						color:@yellow;
+								
+								
+		// 						.sub-nav{
+		// 							display: block;
+		// 							color: @blue;
+		// 							font-size:0.9em;
+		// 							> li.current{
+		// 								color:@yellow;
+										
+		// 							}
+		// 							> li {
+									    
+		// 							}
+		// 						}
+		// 					}
+		// 				}
+		// 				.sub-nav{
+		// 					display: none;
+		// 				}
+		// 			}
+		// 		}
+				
+		// 	}
+		// 	&.right{
+		// 		width: 65%;
+		// 		> div{
+		// 			display: none;
+		// 			position: absolute;
+		// 			top: 0;
+		// 			width: 100%;
+		// 		}
+		// 		.filmmakers{
+		// 			display: block;
+		// 			>div{
+		// 				display: none;
+		// 				position: absolute;
+		// 				top:0;
+		// 				width: 100%;
+		// 			}
+		// 			>div:first-child{
+		// 				display: block;
+		// 			}
+		// 			.maker-photo{
+		// 				width:30%;
+		// 				display: inline-block;
+
+		// 			}
+		// 			.bio{
+		// 				font-size:1.1vw;
+		// 				h4{
+		// 					margin-top:1%;
+		// 				}
+		// 				display: inline-block;
+		// 				width: 60%;
+		// 				text-align:left;
+		// 				color: #1a3464;
+		// 			    margin-left: 3%;
+		// 			}
+		// 		}
+		// 	}
+		// }
+
 	}
 	.bird-karma{
-		background: url(../img/bird-karma/bk-bg.jpg) no-repeat;
-		background-size:cover;
-		background-position:bottom;
+		.subpage{
+			background-repeat:  no-repeat;
+			background-size:cover;
+			background-position:bottom;
+		    min-height: ~'calc(100% - 6vw)';
+		}
 		.logo{
-			margin-left:7%;
-			width: 25%;
-			padding-top: 6%;
+			
+			width: 98%;
+			padding-top: 30%;
 			background: url(../img/bird-karma/bird-karma_tt2.png) no-repeat;
 			background-size:100%;
 		}
 		.col.right{
-			.filmmakers .bio{
+			width: 67%;
+		    position: absolute;
+		    top: 19%;
+		    right: 5vw;
+			.bio{
 				vertical-align: top;
+			}
+		}
+		.landing{
+			background-image:url(../img/bird-karma/landing-bg.jpg);
+			background-position:center;
+			.laurels{
+				position: absolute;
+				width: 44%;
+			    right: 5vw;
+			    top: 26%;
+			}
+		}
+		.filmmakers{
+			background-image:url(../img/bird-karma/bk-bg.jpg);
+		}
+		.photos{
+			
+			.slider{
+				width: 400%;
+				img{
+					
+					width: 25%;
+				}
+				.slide{
+					width: 25%;
+				}
 			}
 		}
 	}
 }
+@import 'ipad.less';

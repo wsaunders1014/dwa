@@ -1,0 +1,103 @@
+@ipadTall: ~"only screen and (min-width:600px) and (max-width:851px) and (orientation:portrait)";
+@ipadWide: ~"only screen and (max-width:1024px) and (orientation:landscape)";
+
+@media @ipadTall{
+
+	.content{
+		.home{
+			h3{
+				margin-top:4%;
+				font-size:25px;
+			}
+			.poster{
+				width: 44%;
+				height: auto;
+				img{
+					&.tall{
+						width: 100%;
+						height: auto;
+					}
+				}
+			}
+		}
+		.page{
+			.static{
+				width: 96vw;
+				position: relative;
+			}
+			.left.col{
+				.menu{
+					.nav{
+						font-size:18px;
+					}
+				}
+			}
+			.col.right{
+				width: 90%;
+				left: 5%;
+				position: relative;
+				right:0;
+				margin-top:25%;
+				> div {
+					.bio{
+						font-size:13px;
+					}
+				}
+			}
+		}
+		.bilby{
+			.static{
+				margin-left:4vw;
+				&:after{
+					content:"";
+					display: table;
+					clear: both;
+				}
+				.logo{
+					width: 20%;
+					padding-top:10%;
+					float: left;
+				}
+				.left{
+					float: left;
+					margin-left:6%;
+					margin-top:3%;
+					width: 74%;
+					.menu{
+						.nav > li{
+							display: inline-block;
+							vertical-align: top;
+							margin-right:5%;
+							&.current{
+								padding: 0;
+								.sub-nav{
+									font-size:0.5em;
+								}
+							}
+							&.current:before{
+								display: none !important;
+							}
+						}
+					}
+				}
+			}
+		}
+		.bird-karma{
+			.static{
+				margin-left: 4vw;
+			}
+			.logo{
+				width: 50%;
+				padding-top:14%;
+			}
+			.left.col{
+				padding-left:3%;
+			}
+			.landing{
+				.laurels{
+					width: 57%;
+				}
+			}
+		}
+	}
+}

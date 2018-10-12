@@ -39,25 +39,31 @@
 			</div>
 		</div>
 		<div class="bird-karma page">
-			<div class="logo"></div>
-			<div class="left col">
-				
-				<div class="menu">
-					<ul class="nav">
-						<li class="current">
-							<span>FILMMAKERS</span>
-							<ul class="sub-nav">
-								<li class="current">JEFF HERMANN</li>
-								<li>WILLIAM SALAZAR</li>
-							</ul>
-						</li>
-						<li><span>PHOTOS</span></li>
-						<li><span>VIDEOS</span></li>
-					</ul>
+			<div class="static">
+				<div class="logo"></div>
+				<div class="left col">
+					
+					<div class="menu">
+						<ul class="nav">
+							<li>
+								<span>FILMMAKERS</span>
+								<ul class="sub-nav">
+									<li>JEFF HERMANN</li>
+									<li>WILLIAM SALAZAR</li>
+								</ul>
+							</li>
+							<li><span>PHOTOS</span></li>
+							<li><span>VIDEOS</span></li>
+						</ul>
+					</div>
 				</div>
 			</div>
-			<div class="right col">
-				<div class="filmmakers">
+			<div class="landing subpage">
+				<div class="laurels"><img src="/img/bird-karma/laurels.png"></div>
+			</div>
+			<div class="filmmakers subpage">
+				<div class="right col">
+			
 					<div>
 						<div class="maker-photo"><img src="img/bird-karma/hermann.jpg"></div>
 						<div class="bio">
@@ -88,32 +94,59 @@
 						</div>
 					</div>
 				</div>
-				<div class="photos"><h3>Photos</h3></div>
-				<div class="videos"><h3>Videos</h3></div>
+				
 			</div>
+			<div class="photos subpage">
+				<div class="slider">
+					<!-- <img class="slide" src="/img/bird-karma/photo-1.jpg">
+					<img class="slide" src="/img/bird-karma/photo-2.jpg">
+					<img class="slide" src="/img/bird-karma/photo-3.jpg">
+					<img class="slide" src="/img/bird-karma/photo-4.jpg"> -->
+					<div class="slide" style="background-image:url(../img/bird-karma/photo-1.jpg)"></div>
+					<div class="slide" style="background-image:url(../img/bird-karma/photo-2.jpg)"></div>
+					<div class="slide" style="background-image:url(../img/bird-karma/photo-3.jpg)"></div>
+					<div class="slide" style="background-image:url(../img/bird-karma/photo-4.jpg)"> </div>
+				</div>
+				<div class="arrow left disabled"></div>
+				<div class="arrow right"></div>
+				<div class="number">1</div>
+			</div>
+			<div class="videos subpage">
+				<video controls preload="">
+					<source src="/video/bird-karma-1.mp4" type="video/mp4">
+				</video>
+				<div class="close-btn">+</div>
+			</div>
+			
+			
 		</div>
 		<div class="bilby page">
-			<div class="logo"></div>
-			<div class="left col">
+			<div class="static">
+				<div class="logo"></div>
+				<div class="left col">
 				
-				<div class="menu">
-					<ul class="nav">
-						<li class="current">
-							<span>FILMMAKERS</span>
-							<ul class="sub-nav">
-								<li class="current">KELLY COONEY</li>
-								<li>PIERRE PERIFEL</li>
-								<li>JP SANS</li>
-								<li>LIRON TOPAZ</li>
-							</ul>
-						</li>
-						<li><span>PHOTOS</span></li>
-						<li><span>VIDEOS</span></li>
-					</ul>
+					<div class="menu">
+						<ul class="nav">
+							<li>
+								<span>FILMMAKERS</span>
+								<ul class="sub-nav">
+									<li>KELLY COONEY</li>
+									<li>PIERRE PERIFEL</li>
+									<li>JP SANS</li>
+									<li>LIRON TOPAZ</li>
+								</ul>
+							</li>
+							<li><span>PHOTOS</span></li>
+							<li><span>VIDEOS</span></li>
+						</ul>
+					</div>
 				</div>
 			</div>
-			<div class="right col">
-				<div class="filmmakers">
+			<div class="landing subpage">
+				<div class="laurels"><img src="/img/bilby/laurel.png" /></div>
+			</div>
+			<div class="filmmakers subpage">
+				<div class="right col">
 					<div>
 						<div class="maker-photo"><img src="img/bilby/Cooney-bio-pic.jpg"></div>
 						<div class="bio">
@@ -155,9 +188,24 @@
 						</div>
 					</div>
 				</div>
-				<div class="photos"><h3>Photos</h3></div>
-				<div class="videos"><h3>Videos</h3></div>
 			</div>
+			<div class="photos subpage">
+				<div class="slider">
+					<div class="slide" style="background-image:url(../img/bilby/photo-1.jpg)"></div>
+					<div class="slide" style="background-image:url(../img/bilby/photo-2.jpg)"></div>
+					<!-- <div class="slide" style="background-image:url(../img/bilby/photo-3.jpg)"></div> -->
+					<div class="slide" style="background-image:url(../img/bilby/photo-4.jpg)"> </div>
+				</div>
+				<div class="arrow left disabled"></div>
+				<div class="arrow right"></div>
+				<div class="number">1</div>
+			</div>
+			<div class="videos subpage">
+				<video controls preload="" poster="/img/bilby/bilby-poster-1.jpg">
+					<source src="/video/bilby-video-1.mp4" type="video/mp4">
+				</video>
+				<div class="close-btn">+</div>
+			</div>	
 		</div>
 	</div>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
