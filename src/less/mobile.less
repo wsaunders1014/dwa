@@ -1,0 +1,309 @@
+@mobile-portrait: ~"only screen and (max-width:600px) and (orientation:portrait)";
+@mobile-landscape:~"screen and (max-width:667px) and (orientation:landscape)";
+@mobile: ~'screen and (max-width:736px)';
+@media @mobile {
+	*::-webkit-scrollbar {
+	  width: 0px;
+	  position: fixed;
+	  right: 0
+	 }
+	 html{
+	 	overflow-y:auto;
+	 }
+	 .noscroll{
+	 	overflow:hidden;
+	 }
+	 .mobile{
+	 	display: block;
+	 }
+	header{
+		z-index: 1001;
+		position: relative;
+		height: 100px;
+		&.flipped{
+			.flipper{
+				height: 100px;
+			}
+		}
+		.flipper{
+			.front,.back{
+			    box-shadow: 0px 5px 14px 5px #00000054;
+			}
+		}
+		.front{
+			height: 100px;
+			.logo{
+				padding-left:20.6%;
+				left: 8.54%;
+			}
+			.text{
+				&.awards{
+					left: 32.5%;
+					font-size:30px;
+
+				}
+				&.fyc{
+					left: 32.5%;
+					font-size:15px;
+				}
+			}
+		}
+		.back{
+			height: 100px;
+			text-align:center;
+			.logo{
+			    height: 50px;
+			    padding-left: 200px;
+			    display: block;
+			    margin: 0 auto;
+			   
+			}
+			.film-menu{
+				width: 100%;
+			    margin: 0;
+			    font-size: 16px;
+			   
+			   
+			}
+			.text{
+				&.awards{
+					font-size:12px;
+				}
+				&.fyc{
+					font-size:15px;
+				}
+			}
+		}
+	}
+	.content{
+		height:auto;
+		padding-top:0px;
+		//overflow: hidden;
+		//overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+		min-height:calc(~'100% - 100px');
+		.page{
+			width: 100vw;
+			padding-top:0;
+			height:auto;
+			//overflow: hidden;
+			//overflow-y:auto;
+			min-height:100%;
+			display: none;
+			.static{
+				width: 90%;
+				left: 5%;
+				margin:20px auto 0;
+				
+				.menu{
+					padding:0;
+					width: 91%;
+					margin: 0 auto;
+					.nav{
+						font-size:14PX;
+						display: flex;
+						flex-wrap:wrap;
+						justify-content:space-between;
+						> li.current{
+							padding:0;
+							&:before{
+								display: none;
+							}
+							.sub-nav{
+							    position: absolute;
+							    width: 160%;
+							    white-space: nowrap;
+							    text-align: right;
+							    right: 0;
+							}
+						}
+					}
+				}
+			}
+			.col.right{
+				top: initial;
+				position: relative;
+				top: 36%;
+				width: 90%;
+				left: 5%;
+				right: initial;
+				> div{
+					position: relative;
+					.maker-photo{
+						vertical-align: top;
+						width: 100%;
+					}
+					.bio{
+						width: 100%;
+						font-size:13px;
+						margin: 0;
+						br{
+							display: none;
+						}
+					}
+				}
+			}
+			.subpage{
+				top: 0px;
+				transform:translateX(100%);
+				width: 100vw;
+				display: none;
+			//	background-image:none !important;
+				padding-top:42%;
+				&.on{
+					display: block;
+				}
+				&.alwaysOn{
+					display: block;
+				}
+				&.on,&.alwaysOn{
+					transform:translateX(0%);
+					
+				}
+				&.clips{
+					.close-btn{
+						font-size:48px;
+					}
+				}
+				&.landing{}
+				&.photos{
+					max-height:initial;
+				    padding-top: 0;
+			        height: 100%;
+			        .slider{
+			        	height: auto;
+		        	    top: 30%;
+    					//transform: translateY(-43%);
+    					.slide{
+    						height: 0;
+    						padding-top:22%;
+    					}
+			        }
+					.arrow{
+						transform: translateY(0%) scale(0.6);
+						&.right{
+							right:10px;
+						}
+						&.left{
+							left: 10px;
+						}
+					}
+				}
+				&.clips{
+					padding-top:0;
+					overflow:hidden;
+				}
+				&.filmmakers{
+					 padding-top: 201px;
+					 background-attachment: fixed;
+				}
+			}
+		}
+		.bird-karma{
+			.logo{
+				width: 100%;
+				padding-top:26%;
+			}
+			.subpage{
+				min-height:100%;
+				&.landing{
+					overflow:hidden;
+					background-position:72%;
+					.laurels{
+						width:90%;
+						right:0%;
+						top:0;
+						margin: 0 auto;
+						position: relative;
+					    max-width:initial;
+					    br{
+					    	display: none;
+					    }
+					    br.mobile{
+					    	display: block;
+					    }
+					    img{
+					    	min-width: 48%;
+					    }
+					}
+				}
+				&.photos{
+					background-image: url(../img/bird-karma/landing-bg.jpg);
+				    background-size: cover;
+			       background-position:85%;
+				}
+			}
+
+			.col.right{
+				
+			}
+		}
+		.bilby{
+			
+			.static{
+				.logo{
+					margin:0 auto 0;
+					padding-top:26%;
+				}
+			}
+
+			.subpage{
+				
+				&.filmmakers{
+				    padding-top: 230px;
+			        background-size: auto;
+			        background-position: top;
+				}
+				&.landing{
+				    background-size: auto 180%;
+   	 				background-position: top;
+					.laurels{
+						top:0%;
+					    width: 90%;
+					    max-width: initial;
+					    right: initial;
+					   
+					    margin:0 auto 0;
+					   	position: relative;
+					    img{
+					    	width: 46%;
+					    	min-width:initial;
+					    }
+					}
+				}
+				&.photos{
+			        background: url(../img/bilby/landing-bg.jpg) no-repeat;
+		            background-size: auto 180%;
+   	 				background-position: top;
+				}
+			}
+		}
+		.home{
+			
+			padding-top: 0px;
+			min-height:initial;
+			display: block;
+			h3{
+				margin-top:30px;
+			}
+			.poster{
+				display: block;
+				margin:30px auto 15px;
+				width: 69%;
+				height: auto;
+				&:hover{
+					transform: scale(1);
+				}
+				img{
+					&.tall{
+						width: 100%;
+						height: auto;
+					}
+				}
+				&#bird-karma{
+					margin-right:auto;
+				}
+			}
+		}
+	}
+}

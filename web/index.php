@@ -6,7 +6,7 @@
 
 <title>DreamWorks Animation Shorts FYC 2018</title>
 
-<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/36ec021bb2-style.min.css">
 
 </head>
 <body>
@@ -41,25 +41,40 @@
 		<div class="bird-karma page">
 			<div class="static">
 				<div class="logo"></div>
-				<div class="left col">
-					
-					<div class="menu">
-						<ul class="nav">
-							<li>
-								<span>FILMMAKERS</span>
-								<ul class="sub-nav">
-									<li>JEFF HERMANN</li>
-									<li>WILLIAM SALAZAR</li>
-								</ul>
-							</li>
-							<li><span>PHOTOS</span></li>
-							<li><span>VIDEOS</span></li>
-						</ul>
-					</div>
+				
+				<div class="menu">
+					<ul class="nav">
+						<li><span>CLIPS</span></li>
+						<li><span>PHOTOS</span></li>
+						
+						<li>
+							<span>FILMMAKERS</span>
+							<ul class="sub-nav">
+								<li>JEFF HERMANN</li>
+								<li>WILLIAM SALAZAR</li>
+							</ul>
+						</li>
+					</ul>
 				</div>
+
+								
 			</div>
 			<div class="landing subpage">
-				<div class="laurels"><img src="/img/bird-karma/laurels.png"></div>
+				<div class="laurels">
+					<img src="/img/bird-karma/1.png" />
+					<br class="mobile">
+					<img src="/img/bird-karma/2.png" />
+					<br/>
+					<img src="/img/bird-karma/3.png" />
+					<img src="/img/bird-karma/4.png" />
+					<img src="/img/bird-karma/5.png" />
+					<img src="/img/bird-karma/6.png" />
+					<img src="/img/bird-karma/7.png" />
+					<img src="/img/bird-karma/8.png" />
+					<img src="/img/bird-karma/9.png" />
+					<img src="/img/bird-karma/10.png" />
+					<img src="/img/bird-karma/11.png" />
+				</div>
 			</div>
 			<div class="filmmakers subpage">
 				<div class="right col">
@@ -106,12 +121,13 @@
 					<div class="slide" style="background-image:url(../img/bird-karma/photo-2.jpg)"></div>
 					<div class="slide" style="background-image:url(../img/bird-karma/photo-3.jpg)"></div>
 					<div class="slide" style="background-image:url(../img/bird-karma/photo-4.jpg)"> </div>
+					<div class="arrow left disabled"></div>
+					<div class="arrow right"></div>
 				</div>
-				<div class="arrow left disabled"></div>
-				<div class="arrow right"></div>
-				<div class="number">1</div>
+				
+				<!-- <div class="number">1</div> -->
 			</div>
-			<div class="videos subpage">
+			<div class="clips subpage">
 				<video controls preload="">
 					<source src="/video/bird-karma-1.mp4" type="video/mp4">
 				</video>
@@ -123,27 +139,41 @@
 		<div class="bilby page">
 			<div class="static">
 				<div class="logo"></div>
-				<div class="left col">
 				
-					<div class="menu">
-						<ul class="nav">
-							<li>
-								<span>FILMMAKERS</span>
-								<ul class="sub-nav">
-									<li>KELLY COONEY</li>
-									<li>PIERRE PERIFEL</li>
-									<li>JP SANS</li>
-									<li>LIRON TOPAZ</li>
-								</ul>
-							</li>
-							<li><span>PHOTOS</span></li>
-							<li><span>VIDEOS</span></li>
-						</ul>
-					</div>
+				
+				<div class="menu">
+					<ul class="nav">
+						<li><span>CLIPS</span></li>
+						<li><span>PHOTOS</span></li>
+						
+						<li>
+							<span>FILMMAKERS</span>
+							<ul class="sub-nav">
+								<li>KELLY COONEY</li>
+								<li>PIERRE PERIFEL</li>
+								<li>JP SANS</li>
+								<li>LIRON TOPAZ</li>
+							</ul>
+						</li>
+					</ul>
 				</div>
+				
 			</div>
 			<div class="landing subpage">
-				<div class="laurels"><img src="/img/bilby/laurel.png" /></div>
+				<div class="laurels">
+					<img src="/img/bilby/1.png" />
+					<img src="/img/bilby/2.png" />
+					<img src="/img/bilby/3.png" />
+					<img src="/img/bilby/4.png" />
+					<img src="/img/bilby/5.png" />
+					<img src="/img/bilby/6.png" />
+					<img src="/img/bilby/7.png" />
+					<img src="/img/bilby/8.png" />
+					<img src="/img/bilby/9.png" />
+					<img src="/img/bilby/10.png" />
+					<img src="/img/bilby/11.png" />
+					<img src="/img/bilby/12.png" />
+				</div>
 			</div>
 			<div class="filmmakers subpage">
 				<div class="right col">
@@ -152,11 +182,11 @@
 						<div class="bio">
 							
 							<h4>KELLY COONEY, PRODUCER</h4>
-							<p>Kelly Cooney is a Producer on the Dreamworks<br/>Animation short “Bilby.” She also currently serves as a<br/>Co-Producer on the upcoming Dreamworks Animation<br/>release “Trolls World Tour.” </p>
+							<p>Kelly Cooney is a Producer on the Dreamworks <br/>Animation short “Bilby.” She also currently serves as a <br/>Co-Producer on the upcoming Dreamworks Animation <br/>release “Trolls World Tour.” </p>
 
-							<p>Her other credits include Production Manager on<br/>“Trolls,” “Puss in Boots,” “Kung Fu Panda: Secrets of the<br/>Scroll,” and the Netflix series “Dragons: Riders of Berk.”<br/>In addition to working in the story department on <br/>“Shrek 2” and “Shrek the Third,” Kelly also spent several<br/>years working as a creative executive in development for<br/>DreamWorks Animation. </p>
+							<p>Her other credits include Production Manager on <br/>“Trolls,” “Puss in Boots,” “Kung Fu Panda: Secrets of the<br/>Scroll,” and the Netflix series “Dragons: Riders of Berk.” <br/>In addition to working in the story department on <br/>“Shrek 2” and “Shrek the Third,” Kelly also spent several <br/>years working as a creative executive in development for <br/>DreamWorks Animation. </p>
 
-							<p>Kelly is originally from Minnesota and attended the<br/>University of Notre Dame, where she studied Film,<br/>Television, and Theater.</p>
+							<p>Kelly is originally from Minnesota and attended the <br/>University of Notre Dame, where she studied Film, <br/>Television, and Theater.</p>
 							
 						</div>
 					</div>
@@ -193,14 +223,15 @@
 				<div class="slider">
 					<div class="slide" style="background-image:url(../img/bilby/photo-1.jpg)"></div>
 					<div class="slide" style="background-image:url(../img/bilby/photo-2.jpg)"></div>
-					<!-- <div class="slide" style="background-image:url(../img/bilby/photo-3.jpg)"></div> -->
+					 <div class="slide" style="background-image:url(../img/bilby/landing-bg.jpg)"></div>
 					<div class="slide" style="background-image:url(../img/bilby/photo-4.jpg)"> </div>
+					<div class="arrow left disabled"></div>
+					<div class="arrow right"></div>
 				</div>
-				<div class="arrow left disabled"></div>
-				<div class="arrow right"></div>
-				<div class="number">1</div>
+				
+				<!-- <div class="number">1</div> -->
 			</div>
-			<div class="videos subpage">
+			<div class="clips subpage">
 				<video controls preload="" poster="/img/bilby/bilby-poster-1.jpg">
 					<source src="/video/bilby-video-1.mp4" type="video/mp4">
 				</video>
@@ -209,6 +240,6 @@
 		</div>
 	</div>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<script src="/js/scripts.js"></script>
+	<script src="/js/36ec021bb2-scripts.min.js"></script>
 </body>
 </html>
