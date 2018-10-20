@@ -81,6 +81,12 @@ img.tall {
   width: auto;
   height: 100%;
 }
+.mobile {
+  display: none;
+}
+#preload {
+  display: none;
+}
 header.flipped .flipper {
   height: 6vw;
   transform: rotateX(180deg);

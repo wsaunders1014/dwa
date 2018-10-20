@@ -1,6 +1,6 @@
 var film;
 $(document).ready(function(){
-	$('.poster').on('click touchstart', function(e){
+	$('.poster').on('click', function(e){
 		e.preventDefault();e.stopPropagation();
 		var id = $(this).attr('id');
 		var index = $(this).index('.poster');

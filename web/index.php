@@ -6,7 +6,7 @@
 
 <title>DreamWorks Animation Shorts FYC 2018</title>
 
-<link rel="stylesheet" type="text/css" href="/css/36ec021bb2-style.min.css">
+<link rel="stylesheet" type="text/css" href="/css/1644fbbc11-style.min.css">
 
 </head>
 <body>
@@ -239,7 +239,22 @@
 			</div>	
 		</div>
 	</div>
+	<div id="preload">
+		<img src="/img/bilby/photo-1.jpg">
+		<img src="/img/bilby/photo-2.jpg">
+		<img src="/img/bilby/landing-bg.jpg">
+		<img src="/img/bilby/photo-4.jpg">
+		<img src="/img/bird-karma/photo-1.jpg">
+		<img src="/img/bird-karma/photo-2.jpg">
+		<img src="/img/bird-karma/photo-3.jpg">
+		<img src="/img/bird-karma/photo-4.jpg">
+		<img src="/img/bird-karma/landing-bg.jpg">
+		<img src="/img/bird-karma/bk-bg.jpg">
+		<img src="/img/bilby/bilby-bg.jpg">
+		<img src="/img/bilby/bilby-tt.png">
+		<img src="/img/bird-karma/bird-karma_tt2.png">
+	</div>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<script src="/js/36ec021bb2-scripts.min.js"></script>
+	<script src="/js/1644fbbc11-scripts.min.js"></script>
 </body>
 </html>
