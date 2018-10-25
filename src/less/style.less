@@ -356,58 +356,52 @@ header{
     		}
     		&.photos{
     			overflow: hidden;
-				max-height:~'calc(100% - 6vw)';
+				//max-height:~'calc(100% - 6vw)';
+			    top: 0;
+			    height: 100%;
+			    background-color: #000000bf;
+			    background-image: none;
+			    z-index: 1001;
     			.slider{
-    				height: 100%;
+    				height: 80%;
     				text-align:left;
     				position: absolute;
-    				top: 0;
-    				background:#000;
-    				img{
-    					float: left;
-    				}
+    				top: 10%;
+    				
+    				
     				.slide {
-    					float: left;
+    					display: inline-block;
     					
-					    height: 100%;
-					    background-size: cover;
-					    background-repeat: no-repeat;
-					    background-position: 50%;
+					    height: auto;
+					   vertical-align: middle;
     				}
 
     			}
     			.arrow{
 				    top: 50%;
-    				transform: translateY(0%);
-    				width: 50px;
+    				transform: translateY(-50%);
+    				width: 51px;
     				height: 88px;
-    				position: fixed;
-    				
-    				background-size:cover;
+    				position: absolute;
+    				background-repeat:no-repeat;
+    				background-size:51px 176px;
     				cursor: pointer;
     				&.disabled{
     					display: none;
     				}
+    				&:hover{
+    					background-position:0 -88px;
+    				}
     				&.left{
-    					background-image:url(../img/left-arrow.png);
+    					background-image:url(../img/left-arrow-white.png);
     					left: 38px;
     				}
     				&.right{
-    					background-image:url(../img/right-arrow.png);
+    					background-image:url(../img/right-arrow-white.png);
     					right:38px;
     				}
     			}
-    			.number{
-    				background:@blue;
-				    height: 30px;
-				    width: 20px;
-				    line-height: 30px;
-				    color: #fff;
-				    position: absolute;
-				    right: 65px;
-				    bottom: 30px;
-				    font-weight:bold;
-    			}
+    			
     		}
     		&.clips{
     			z-index: 1003;
@@ -423,21 +417,22 @@ header{
     				top: 50%;
     				transform:translateY(-50%);
     			}
-    			.close-btn{
-    				position: absolute;
-    				right: 2vw;
-    				top: 2vw;
-    				font-size:5vw;
-    				color: #fff;
-				    transform: rotate(45deg);
-				    cursor: pointer;
-				    &:hover{
-				    	color: @yellow;
-				    }
-    			}
+    			
     		}
+    		.close-btn{
+				position: absolute;
+				right: 2vw;
+				top: 2vw;
+				font-size:5vw;
+				color: #fff;
+			    transform: rotate(45deg);
+			    cursor: pointer;
+			    &:hover{
+			    	color: @yellow;
+			    }
+			}
 		}
-	
+		
 			
 		
 		
@@ -545,13 +540,14 @@ header{
 		.filmmakers{
 			background: url(../img/bilby/bilby-bg.jpg) no-repeat;
 			background-size:cover;
-			background-position:bottom;
+			background-position:center 80%;
 		}
 		.photos{
 			.slider{
-				width:400%;
+				width:1000%;
 				.slide{
-					width: 25%;
+					width:8%;
+					margin: 0 1%;
 				}
 			}
 		}
@@ -611,17 +607,22 @@ header{
 		.photos{
 			
 			.slider{
-				width: 400%;
-				img{
-					
-					width: 25%;
-				}
+				width: 1200%;
+				
 				.slide{
-					width: 25%;
+				    width: 6.3333333%;
+    				margin: 0 1%;
 				}
 			}
 		}
 	}
+}
+.copyright{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
 }
 @import 'ipad.less';
 @import 'mobile.less';

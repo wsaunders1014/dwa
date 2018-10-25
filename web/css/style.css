@@ -301,55 +301,46 @@ header .back .text.awards {
 }
 .content .page .subpage.photos {
   overflow: hidden;
-  max-height: calc(100% - 6vw);
+  top: 0;
+  height: 100%;
+  background-color: #000000bf;
+  background-image: none;
+  z-index: 1001;
 }
 .content .page .subpage.photos .slider {
-  height: 100%;
+  height: 80%;
   text-align: left;
   position: absolute;
-  top: 0;
-  background: #000;
-}
-.content .page .subpage.photos .slider img {
-  float: left;
+  top: 10%;
 }
 .content .page .subpage.photos .slider .slide {
-  float: left;
-  height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50%;
+  display: inline-block;
+  height: auto;
+  vertical-align: middle;
 }
 .content .page .subpage.photos .arrow {
   top: 50%;
-  transform: translateY(0%);
-  width: 50px;
+  transform: translateY(-50%);
+  width: 51px;
   height: 88px;
-  position: fixed;
-  background-size: cover;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 51px 176px;
   cursor: pointer;
 }
 .content .page .subpage.photos .arrow.disabled {
   display: none;
 }
+.content .page .subpage.photos .arrow:hover {
+  background-position: 0 -88px;
+}
 .content .page .subpage.photos .arrow.left {
-  background-image: url(../img/left-arrow.png);
+  background-image: url(../img/left-arrow-white.png);
   left: 38px;
 }
 .content .page .subpage.photos .arrow.right {
-  background-image: url(../img/right-arrow.png);
+  background-image: url(../img/right-arrow-white.png);
   right: 38px;
-}
-.content .page .subpage.photos .number {
-  background: #092e6e;
-  height: 30px;
-  width: 20px;
-  line-height: 30px;
-  color: #fff;
-  position: absolute;
-  right: 65px;
-  bottom: 30px;
-  font-weight: bold;
 }
 .content .page .subpage.clips {
   z-index: 1003;
@@ -366,7 +357,7 @@ header .back .text.awards {
   top: 50%;
   transform: translateY(-50%);
 }
-.content .page .subpage.clips .close-btn {
+.content .page .subpage .close-btn {
   position: absolute;
   right: 2vw;
   top: 2vw;
@@ -375,7 +366,7 @@ header .back .text.awards {
   transform: rotate(45deg);
   cursor: pointer;
 }
-.content .page .subpage.clips .close-btn:hover {
+.content .page .subpage .close-btn:hover {
   color: #f1b208;
 }
 .content .page .col.right {
@@ -468,13 +459,14 @@ header .back .text.awards {
 .content .bilby .filmmakers {
   background: url(../img/bilby/bilby-bg.jpg) no-repeat;
   background-size: cover;
-  background-position: bottom;
+  background-position: center 80%;
 }
 .content .bilby .photos .slider {
-  width: 400%;
+  width: 1000%;
 }
 .content .bilby .photos .slider .slide {
-  width: 25%;
+  width: 8%;
+  margin: 0 1%;
 }
 .content .bird-karma .static .menu .nav li.current {
   color: #fff;
@@ -518,13 +510,18 @@ header .back .text.awards {
   background-image: url(../img/bird-karma/bk-bg.jpg);
 }
 .content .bird-karma .photos .slider {
-  width: 400%;
-}
-.content .bird-karma .photos .slider img {
-  width: 25%;
+  width: 1200%;
 }
 .content .bird-karma .photos .slider .slide {
-  width: 25%;
+  width: 6.3333333%;
+  margin: 0 1%;
+}
+.copyright {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
 }
 @media only screen and (min-width:600px) and (max-width:851px) and (orientation:portrait) {
   .content .home h3 {
@@ -811,7 +808,7 @@ header .back .text.awards {
     padding-top: 22%;
   }
   .content .page .subpage.photos .arrow {
-    transform: translateY(0%) scale(0.6);
+    transform: translateY(0%) scale(0.4);
   }
   .content .page .subpage.photos .arrow.right {
     right: 10px;
@@ -889,6 +886,12 @@ header .back .text.awards {
     background: url(../img/bilby/landing-bg.jpg) no-repeat;
     background-size: auto 180%;
     background-position: top;
+  }
+  .content .bilby .subpage.photos .slider .slide:nth-child(1) {
+    background-position: right;
+  }
+  .content .bilby .subpage.photos .slider .slide:nth-child(3) {
+    background-position: left;
   }
   .content .home {
     padding-top: 0px;

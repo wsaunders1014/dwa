@@ -6,7 +6,7 @@
 
 <title>DreamWorks Animation Shorts FYC 2018</title>
 
-<link rel="stylesheet" type="text/css" href="/css/1644fbbc11-style.min.css">
+<link rel="stylesheet" type="text/css" href="/css/7b52b62c3b-style.min.css">
 
 </head>
 <body>
@@ -50,8 +50,9 @@
 						<li>
 							<span>FILMMAKERS</span>
 							<ul class="sub-nav">
-								<li>JEFF HERMANN</li>
+								
 								<li>WILLIAM SALAZAR</li>
+								<li>JEFF HERMANN</li>
 							</ul>
 						</li>
 					</ul>
@@ -78,7 +79,19 @@
 			</div>
 			<div class="filmmakers subpage">
 				<div class="right col">
-			
+					<div>
+						<div class="maker-photo"><img src="img/bird-karma/salazar.jpg"></div>
+						<div class="bio">
+							
+							<h4>WILLIAM SALAZAR, DIRECTOR</h4>
+							<p>Director William Salazar recently completed production <br/>on the short film “Bird Karma.” For the past 20-plus <br/>years, Salazar has been an integral part of <br/>the DreamWorks family, going all the way back to the <br/>studio’s critically acclaimed film “The Prince of Egypt,”<br/>where he worked as a supervising animator. Over the <br/>years, Salazar has worked as a supervising animator <br/>and/or character animator on a number of films, <br/>including “Kung Fu Panada 2,” “Monsters vs. Aliens,” <br/>“Over the Hedge,” “Madagascar” and “Spirit: Stallion of <br/>the Cimarron.”   </p>
+
+							<p>Salazar began his career as an animator in 1991, working <br/>for Steven Spielberg’s Amblimation on the films “An <br/>American Tail: Fievel Goes West,” “We’re Back! A <br/>Dinosaur’s Story” and “Balto.”   </p>
+
+							<p>Born on the French Mediterranean island of Corscia, <br/>Salazar studied art at Ecole des Beaux Arts in <br/>Agnouleme, France and animation film studies at the <br/>Gobelins, L’Ecole de L’Image. </p> 
+							
+						</div>
+					</div>
 					<div>
 						<div class="maker-photo"><img src="img/bird-karma/hermann.jpg"></div>
 						<div class="bio">
@@ -95,37 +108,22 @@
 							
 						</div>
 					</div>
-					<div>
-						<div class="maker-photo"><img src="img/bird-karma/salazar.jpg"></div>
-						<div class="bio">
-							
-							<h4>WILLIAM SALAZAR, DIRECTOR</h4>
-							<p>Director William Salazar recently completed production <br/>on the short film “Bird Karma.” For the past 20-plus <br/>years, Salazar has been an integral part of <br/>the DreamWorks family, going all the way back to the <br/>studio’s critically acclaimed film “The Prince of Egypt,”<br/>where he worked as a supervising animator. Over the <br/>years, Salazar has worked as a supervising animator <br/>and/or character animator on a number of films, <br/>including “Kung Fu Panada 2,” “Monsters vs. Aliens,” <br/>“Over the Hedge,” “Madagascar” and “Spirit: Stallion of <br/>the Cimarron.”   </p>
-
-							<p>Salazar began his career as an animator in 1991, working <br/>for Steven Spielberg’s Amblimation on the films “An <br/>American Tail: Fievel Goes West,” “We’re Back! A <br/>Dinosaur’s Story” and “Balto.”   </p>
-
-							<p>Born on the French Mediterranean island of Corscia, <br/>Salazar studied art at Ecole des Beaux Arts in <br/>Agnouleme, France and animation film studies at the <br/>Gobelins, L’Ecole de L’Image. </p> 
-							
-						</div>
-					</div>
+					
 				</div>
-				
+				<div class="close-btn">+</div>
 			</div>
 			<div class="photos subpage">
 				<div class="slider">
-					<!-- <img class="slide" src="/img/bird-karma/photo-1.jpg">
-					<img class="slide" src="/img/bird-karma/photo-2.jpg">
-					<img class="slide" src="/img/bird-karma/photo-3.jpg">
-					<img class="slide" src="/img/bird-karma/photo-4.jpg"> -->
-					<div class="slide" style="background-image:url(../img/bird-karma/photo-1.jpg)"></div>
-					<div class="slide" style="background-image:url(../img/bird-karma/photo-2.jpg)"></div>
-					<div class="slide" style="background-image:url(../img/bird-karma/photo-3.jpg)"></div>
-					<div class="slide" style="background-image:url(../img/bird-karma/photo-4.jpg)"> </div>
-					<div class="arrow left disabled"></div>
-					<div class="arrow right"></div>
+					<?php for($i=1;$i<13;$i++){
+						echo "<img class='slide' src='../img/bird-karma/photo-$i.jpg'>";
+					} ?>
+			
+					
 				</div>
+				<div class="arrow left disabled"></div>
+					<div class="arrow right"></div>
+				<div class="close-btn">+</div>
 				
-				<!-- <div class="number">1</div> -->
 			</div>
 			<div class="clips subpage">
 				<video controls preload="">
@@ -149,10 +147,12 @@
 						<li>
 							<span>FILMMAKERS</span>
 							<ul class="sub-nav">
-								<li>KELLY COONEY</li>
+								<li>LIRON TOPAZ</li>
 								<li>PIERRE PERIFEL</li>
 								<li>JP SANS</li>
-								<li>LIRON TOPAZ</li>
+								
+								<li>KELLY COONEY</li>
+								<li>JEFF HERMANN</li>
 							</ul>
 						</li>
 					</ul>
@@ -178,15 +178,11 @@
 			<div class="filmmakers subpage">
 				<div class="right col">
 					<div>
-						<div class="maker-photo"><img src="img/bilby/Cooney-bio-pic.jpg"></div>
+						<div class="maker-photo"><img src="img/bilby/Topaz.jpg"></div>
 						<div class="bio">
 							
-							<h4>KELLY COONEY, PRODUCER</h4>
-							<p>Kelly Cooney is a Producer on the Dreamworks <br/>Animation short “Bilby.” She also currently serves as a <br/>Co-Producer on the upcoming Dreamworks Animation <br/>release “Trolls World Tour.” </p>
-
-							<p>Her other credits include Production Manager on <br/>“Trolls,” “Puss in Boots,” “Kung Fu Panda: Secrets of the<br/>Scroll,” and the Netflix series “Dragons: Riders of Berk.” <br/>In addition to working in the story department on <br/>“Shrek 2” and “Shrek the Third,” Kelly also spent several <br/>years working as a creative executive in development for <br/>DreamWorks Animation. </p>
-
-							<p>Kelly is originally from Minnesota and attended the <br/>University of Notre Dame, where she studied Film, <br/>Television, and Theater.</p>
+							<h4>LIRON TOPAZ, DIRECTOR</h4>
+							Director Liron Topaz is a Character Lead Animator at <br/>DreamWorks Animation Studios. Born and raised in <br/>Tel-Aviv, Israel, Liron was passionate about animation <br/>from a very early age. He graduated from Ringling <br/>College of Art and Design with honors, and won the <br/>Ringling President’s Award for his thesis film ‘This Side <br/>Up’. In 2008, Liron was selected by the Academy of <br/>Motion Pictures Arts and Sciences for their exclusive <br/>internship program at Sony Pictures Imageworks, and <br/>continued there to work on Tim Burton’s Alice in <br/>Wonderland. He then moved to DreamWorks Animation <br/>where he worked on various films including the ‘How to <br/>Train Your Dragon’ franchise, ‘The Croods’ and the ‘Kung <br/>Fu Panda’ franchise, where he served as Lead Character <br/>Animator of Master Oogway.
 							
 						</div>
 					</div>
@@ -208,27 +204,49 @@
 							
 						</div>
 					</div>
+					
 					<div>
-						<div class="maker-photo"><img src="img/bilby/Topaz.jpg"></div>
+						<div class="maker-photo"><img src="img/bilby/Cooney-bio-pic.jpg"></div>
 						<div class="bio">
 							
-							<h4>LIRON TOPAZ, DIRECTOR</h4>
-							Director Liron Topaz is a Character Lead Animator at <br/>DreamWorks Animation Studios. Born and raised in <br/>Tel-Aviv, Israel, Liron was passionate about animation <br/>from a very early age. He graduated from Ringling <br/>College of Art and Design with honors, and won the <br/>Ringling President’s Award for his thesis film ‘This Side <br/>Up’. In 2008, Liron was selected by the Academy of <br/>Motion Pictures Arts and Sciences for their exclusive <br/>internship program at Sony Pictures Imageworks, and <br/>continued there to work on Tim Burton’s Alice in <br/>Wonderland. He then moved to DreamWorks Animation <br/>where he worked on various films including the ‘How to <br/>Train Your Dragon’ franchise, ‘The Croods’ and the ‘Kung <br/>Fu Panda’ franchise, where he served as Lead Character <br/>Animator of Master Oogway.
+							<h4>KELLY COONEY, PRODUCER</h4>
+							<p>Kelly Cooney is a Producer on the Dreamworks <br/>Animation short “Bilby.” She also currently serves as a <br/>Co-Producer on the upcoming Dreamworks Animation <br/>release “Trolls World Tour.” </p>
+
+							<p>Her other credits include Production Manager on <br/>“Trolls,” “Puss in Boots,” “Kung Fu Panda: Secrets of the<br/>Scroll,” and the Netflix series “Dragons: Riders of Berk.” <br/>In addition to working in the story department on <br/>“Shrek 2” and “Shrek the Third,” Kelly also spent several <br/>years working as a creative executive in development for <br/>DreamWorks Animation. </p>
+
+							<p>Kelly is originally from Minnesota and attended the <br/>University of Notre Dame, where she studied Film, <br/>Television, and Theater.</p>
+							
+						</div>
+					</div>
+					<div>
+						<div class="maker-photo"><img src="img/bird-karma/hermann.jpg"></div>
+						<div class="bio">
+							
+							<h4>JEFF HERMANN, PRODUCER</h4>
+							<p>Jeff Hermann currently in production on the short film <br/>“Marooned,” directed by Andrew Erekson. Previously, <br/>Hermann served as producer the short films “Bilby” and <br/>“Bird Karma.” He also served as Co-Producer on “Kung <br/>Fu Panda 3” and as Production Manager on the first two <br/>“Kung Fu Panda” films. Collectively, the three films have <br/>grossed over 1.8 billion in worldwide box office.</p>
+  
+							<p>In his eighteen years at DreamWorks Animation, <br/>Hermann has worked as Production Supervisor on titles <br/>including “Sinbad” and “Spirit: Stallion of the Cimarron.”  <br/>Additionally, he served as Digital 2D Producer on the <br/>“Kung Fu Panda Holiday Special” in 2010.</p>
+
+							<p>Prior to joining DreamWorks Animation, Hermann spent <br/>five years at Walt Disney Feature Animation where he <br/>held the roles of Assistant Production Manager and <br/>Production Coordinator on films including “John Henry,” <br/>“Mulan,” “The Hunchback of Notre Dame” and <br/>“Pocahontas.” </p>
+
+							<p>Raised in Oak Lawn, Illinois, Hermann attended Southern <br/>Illinois University-Carbondale where he graduated with a <br/>Bachelor Degree in Film Production.</p>
+
 							
 						</div>
 					</div>
 				</div>
+				<div class="close-btn">+</div>
 			</div>
 			<div class="photos subpage">
 				<div class="slider">
-					<div class="slide" style="background-image:url(../img/bilby/photo-1.jpg)"></div>
-					<div class="slide" style="background-image:url(../img/bilby/photo-2.jpg)"></div>
-					 <div class="slide" style="background-image:url(../img/bilby/landing-bg.jpg)"></div>
-					<div class="slide" style="background-image:url(../img/bilby/photo-4.jpg)"> </div>
-					<div class="arrow left disabled"></div>
-					<div class="arrow right"></div>
+					<?php for($i=1;$i<11;$i++){
+						echo "<img class='slide' src='../img/bilby/photo-$i.jpg'>";
+					} ?>
+					
 				</div>
-				
+				<div class="arrow left disabled"></div>
+				<div class="arrow right"></div>
+				<div class="close-btn">+</div>
 				<!-- <div class="number">1</div> -->
 			</div>
 			<div class="clips subpage">
@@ -239,6 +257,7 @@
 			</div>	
 		</div>
 	</div>
+	<div class="copyright"> &copy; 2018 DreamWorks Animation.  All Rights Reserved.  </div>
 	<div id="preload">
 		<img src="/img/bilby/photo-1.jpg">
 		<img src="/img/bilby/photo-2.jpg">
@@ -255,6 +274,6 @@
 		<img src="/img/bird-karma/bird-karma_tt2.png">
 	</div>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<script src="/js/1644fbbc11-scripts.min.js"></script>
+	<script src="/js/7b52b62c3b-scripts.min.js"></script>
 </body>
 </html>

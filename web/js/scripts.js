@@ -9,7 +9,7 @@ $(document).ready(function(){
 		$('header, .content').addClass('flipped');
 		$('.home').fadeOut();
 		$('.page.'+id).delay(0).fadeIn(400,function(){
-			$(this).find('.landing').addClass('on');
+			$(this).find('.landing').addClass('alwaysOn');
 		});
 
 		$('.'+film).find('.static').delay(1000).fadeIn()
@@ -29,7 +29,7 @@ $(document).ready(function(){
 			$('.right.arrow').removeClass('disabled')
 			$('.slider').removeAttr('style')
 			$('.page.'+id).delay().stop().fadeIn(400, function(){
-				$('.page.'+id).find('.landing').addClass('on')
+				$('.page.'+id).find('.landing').addClass('alwaysOn')
 			});
 			$('.'+film).find('.static').delay(1000).fadeIn()
 			$(this).addClass('active').siblings('.active').removeClass('active');
@@ -46,7 +46,8 @@ $(document).ready(function(){
 				$('.'+film).find('.on').removeClass('on');
 				$(this).addClass('current').siblings('.current').removeClass('current').children('.sub-nav').children().first().addClass('current');
 			}else{
-				$('.'+film).addClass('noscroll')
+				$('.'+film).addClass('noscroll');
+				$('.'+film).find('.on').removeClass('on');
 			}
 			if(subpage == 'filmmakers'){
 				$('.'+film).find('.filmmakers').find('.right').children().hide().first().show();
@@ -73,8 +74,8 @@ $(document).ready(function(){
 	var current = 1;
 	//PHOTO CONTROL
 	$('.arrow').click(function(){
-		var slider = $(this).parent('.slider');
-		var total = $(this).parent('.slider').children('.slide').length;
+		var slider = $(this).siblings('.slider');
+		var total = $(this).siblings('.slider').children('.slide').length;
 		
 
 		console.log(total);
@@ -101,6 +102,7 @@ $(document).ready(function(){
 
 	$('.close-btn').click(function(){
 		$(this).parent().removeClass('on');
+		$('.current').removeClass('current');
 		$('.'+film).removeClass('noscroll')
 		stopMedia();
 	})

@@ -180,7 +180,7 @@
     					}
 			        }
 					.arrow{
-						transform: translateY(0%) scale(0.6);
+						transform: translateY(0%) scale(0.4);
 						&.right{
 							right:10px;
 						}
@@ -275,6 +275,16 @@
 			        background: url(../img/bilby/landing-bg.jpg) no-repeat;
 		            background-size: auto 180%;
    	 				background-position: top;
+   	 				.slider{
+   	 					.slide{
+   	 						&:nth-child(1){
+   	 							background-position:right;
+   	 						}
+   	 						&:nth-child(3){
+   	 							background-position:left;
+   	 						}
+   	 					}
+   	 				}
 				}
 			}
 		}
