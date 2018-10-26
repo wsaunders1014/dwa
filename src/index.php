@@ -246,7 +246,7 @@
 					<img src="../img/bilby/photo-1.jpg">
 				</div>
 				<div class="strip">
-					<?php for($i=1;$i<11;$i++){
+					<?php for($i=1;$i<12;$i++){
 						echo "<div class='slide".(($i==1) ? " active":"")."' src='../img/bilby/photo-$i.jpg' style='background-image:url(../img/bilby/photo-$i.jpg)'></div>";
 					} ?>
 			

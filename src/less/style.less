@@ -285,7 +285,7 @@ header{
 			}
 			.menu{
 				position: relative;
-		    	padding-left: 7%;
+		    	
 				.nav{
 					color:@blue;
 					font-weight:800;
@@ -367,7 +367,9 @@ header{
 				    margin:0 auto 0;
 			       	position: absolute;
 				    top: 20vh;
-				    left: 25.5vw;
+				    left: 50%;
+				    transform: translateX(-50%);
+				    min-width: 700px;
 			    	img{
 				    	height:auto;
 				    	width: auto;
@@ -522,7 +524,7 @@ header{
 	}
 	.bilby{
 		.static{
-			margin-left:8vw;
+			
 			.logo{
 			    width: 46%;
 			    padding-top: 30%;
@@ -563,6 +565,17 @@ header{
 			background: url(../img/bilby/bilby-bg.jpg) no-repeat;
 			background-size:cover;
 			background-position:center 80%;
+			.right.col{
+				@media (max-width: 1045px){
+					right: 0;
+					width: 88%;
+					left: 7vw;
+					top: 28vw;
+					> div .bio{
+						font-size:1.7vw;
+					}
+				}
+			}
 		}
 		.subpage.photos{
 			background: url(../img/bilby/bilby-bg.jpg) no-repeat;
@@ -570,7 +583,7 @@ header{
 			background-position:center 80%;
 			.strip{
 				.slide{
-				    width: 8.3vw;
+				    width: 7.9vw;
 				}
 			}
 			.slider{
@@ -589,6 +602,10 @@ header{
 	}
 	.bird-karma{
 		.static{
+			.logo{
+				left: -4%;
+				position: relative;
+			}
 			.menu .nav li.current{
 				color: #fff;
 				.sub-nav{
@@ -623,7 +640,7 @@ header{
 				right: 0;
 				width: 88%;
 				left: 7vw;
-				top: 25%;
+				top: 35vw;
 				> div .bio{
 					font-size:1.7vw;
 				}
@@ -637,7 +654,7 @@ header{
 				width: 98vh;
 			    right:1vw;
 			    top: 15vw;
-			    max-width:53%;
+			    max-width:62%;
 			}
 		}
 		.filmmakers{

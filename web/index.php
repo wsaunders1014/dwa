@@ -6,7 +6,7 @@
 
 <title>DreamWorks Animation Shorts FYC 2018</title>
 
-<link rel="stylesheet" type="text/css" href="/css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/80abba1caf-style.min.css">
 
 </head>
 <body>
@@ -246,7 +246,7 @@
 					<img src="../img/bilby/photo-1.jpg">
 				</div>
 				<div class="strip">
-					<?php for($i=1;$i<11;$i++){
+					<?php for($i=1;$i<12;$i++){
 						echo "<div class='slide".(($i==1) ? " active":"")."' src='../img/bilby/photo-$i.jpg' style='background-image:url(../img/bilby/photo-$i.jpg)'></div>";
 					} ?>
 			
@@ -289,6 +289,6 @@
 		<img src="/img/bird-karma/bird-karma_tt2.png">
 	</div>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<script src="/js/scripts.js"></script>
+	<script src="/js/80abba1caf-scripts.min.js"></script>
 </body>
 </html>
