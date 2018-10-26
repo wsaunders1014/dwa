@@ -7,7 +7,7 @@
 		.home{
 			h3{
 				margin-top:4%;
-				font-size:25px;
+				
 			}
 			.poster{
 				width: 44%;
@@ -22,7 +22,8 @@
 		}
 		.page{
 			.static{
-				width: 96vw;
+				width: 90%;
+				left: 5%;
 				position: relative;
 				&:after{
 					content:"";
@@ -33,13 +34,13 @@
 				    margin: 10px auto;
 				}
 				.menu{
-					
+					margin: 0 auto;
 					padding: 0;
-					
+					width: 80%;
 					.nav{
 						font-size:18px;
 					    display: flex;
-    					justify-content: space-evenly;
+    					justify-content: space-between;
 						> li {
 							
 							display: inline-block;
@@ -63,21 +64,22 @@
 			}
 			.subpage{
 				&.photos{
-					.arrow{
-						bottom:initial;
-					    top: 50%;
-	    				transform: translateY(-50%);
-	    				width: 50px;
-	    				height: 50px;
-	    				&.left{
-	    					left:38px;
-	    				}
-	    			}
+					.main{
+						width: 80%;	
+						left: 10%;
+					}
+				}
+				&.landing{
+					.laurels{
+						img{
+							width: 32.2%;
+						}
+					}
 				}
 			}
 			.col.right{
-				width: 90%;
-				left: 5%;
+				width: 80%;
+				left: 14%;
 				position: relative;
 				right:0;
 				margin-top:25%;
@@ -94,16 +96,15 @@
 				
 				.logo{
 					width: 40%;
-					padding-top:10%;
+					padding-top:20%;
 					
 				}
 				
 					
 				.menu{
 				
-					margin-left:6%;
-					margin-top:3%;
-					width: 74%;
+					
+					
 					.nav > li{
 						
 						&.current{
@@ -120,9 +121,16 @@
 			}
 			.landing{
 				.laurels{
-					top: 14%;
-					width: 82%;
-					max-width:initial;
+			    	top: 24%;
+				    width: 80%;
+				    left: 10%;
+				    max-width: initial;
+				    right: initial;
+				}
+			}
+			.filmmakers{
+				.col.right{
+					margin-top: 40%;
 				}
 			}
 		}
@@ -135,7 +143,7 @@
 				}
 				.menu{
 					margin: 1% auto 0;
-					width: 90%;
+					
 
 					.nav{
 						> li.current{

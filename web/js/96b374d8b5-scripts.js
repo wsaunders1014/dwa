@@ -36,7 +36,7 @@ $(document).ready(function(){
 			});
 			$('.'+film).find('.static').delay(1000).fadeIn()
 			$(this).addClass('active').siblings('.active').removeClass('active');
-
+			$('.subpage').removeAttr('style');
 		}
 	})
 	//Main Nav

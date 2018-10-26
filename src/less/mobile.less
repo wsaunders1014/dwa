@@ -80,7 +80,7 @@
 	}
 	.content{
 		height:auto;
-		padding-top:0px;
+		padding-top:18vw;
 		//overflow: hidden;
 		//overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
@@ -289,9 +289,12 @@
 			.subpage{
 				background-image: none;
 				&.filmmakers{
-				    padding-top: 33vw;
+				    padding-top: 20vw;
 			        background-size: auto;
 			        background-position: top;
+			        .col.right{
+			        	margin-top:13%;
+			        }
 				}
 				&.landing{
 				    background-size: auto 180%;
@@ -301,7 +304,7 @@
 					    width: 90%;
 					    max-width: initial;
 					    right: initial;
-					   
+					   	left: initial;
 					    margin:0 auto 0;
 					   	position: relative;
 					    img{
@@ -332,6 +335,7 @@
 			position: relative;
 			h3{
 				margin-top:30px;
+				font-size:6vw;
 			}
 			.poster{
 				display: block;
@@ -375,6 +379,12 @@
 	}
 	.content{
 		min-height: calc(~'100% - 100px');
+		padding-top:0;
+		.home{
+			h3{
+				margin-top:0;
+			}
+		}
 		.bilby{
 			.subpage{
 				&.filmmakers{

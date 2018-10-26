@@ -279,6 +279,7 @@ header{
 		    margin-top: 29px;
 		    z-index: 1000;
 		    display: none;
+		    min-width: 320px;
 		    .logo{
 			    height: 0; 
 			}
@@ -290,6 +291,9 @@ header{
 					font-weight:800;
 					font-size:1vw;
 					letter-spacing: 0.1vw;
+					@media (max-width: 1045px){
+						font-size:1.7vw;
+					}
 					> li.current{
 						padding-left:5%;
 						&:before{
@@ -407,45 +411,7 @@ header{
 			    		}
 			    	}
 			    }
-    			// .slider{
-    			// 	height: 80%;
-    			// 	text-align:left;
-    			// 	position: absolute;
-    			// 	top: 10%;
-    				
-    				
-    			// 	.slide {
-    			// 		display: inline-block;
-    					
-					  //   height: auto;
-					  //  vertical-align: middle;
-    			// 	}
-
-    			// }
-    			// // .arrow{
-				   //  top: 50%;
-    			// 	transform: translateY(-50%);
-    			// 	width: 51px;
-    			// 	height: 88px;
-    			// 	position: absolute;
-    			// 	background-repeat:no-repeat;
-    			// 	background-size:51px 176px;
-    			// 	cursor: pointer;
-    			// 	&.disabled{
-    			// 		display: none;
-    			// 	}
-    			// 	&:hover{
-    			// 		background-position:0 -88px;
-    			// 	}
-    			// 	&.left{
-    			// 		background-image:url(../img/left-arrow-white.png);
-    			// 		left: 38px;
-    			// 	}
-    			// 	&.right{
-    			// 		background-image:url(../img/right-arrow-white.png);
-    			// 		right:38px;
-    			// 	}
-    			// }
+    
     			
     		}
     		&.clips{
@@ -520,6 +486,10 @@ header{
 		min-height: ~'calc(100% - 10.8vw)';
 		display: block;
 		padding-top:10.8vw;
+			@media (max-width: 940px){
+				overflow:auto;
+				max-height: ~'calc(100% - 10.8vw)';
+			}
 		h3{
 			color:#fff;
 			font-weight:400;
@@ -534,9 +504,16 @@ header{
 			box-shadow:8px 12px 24px 0px #0000007d;
 			transition: transform 1s;
 			cursor: pointer;
-
+			@media (max-width: 940px){
+				display: block;
+				margin: 2vh auto 0;
+		        width: 38.5vh;
+			}
 			&#bird-karma{
 				margin-right: 7%;
+				@media (max-width: 940px){
+					margin-right:auto;
+				}
 			}
 			&:hover{
 				transform:scale(1.08);
@@ -642,6 +619,15 @@ header{
 			.bio{
 				vertical-align: top;
 			}
+			@media (max-width: 1045px){
+				right: 0;
+				width: 88%;
+				left: 7vw;
+				top: 25%;
+				> div .bio{
+					font-size:1.7vw;
+				}
+			}
 		}
 		.landing{
 			background-image:url(../img/bird-karma/landing-bg.jpg);
@@ -682,6 +668,11 @@ header{
     width: 100%;
     text-align: center;
     font-size: 14px;
+    @media (max-width: 940px){
+    	position: relative;
+    	bottom: 0;
+    	margin:10px auto;
+    }
 }
 @import 'ipad.less';
 @import 'mobile.less';
