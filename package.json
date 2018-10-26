@@ -39,5 +39,8 @@
     "postcss": "^6.0.23",
     "postcss-cli": "^5.0.1",
     "uglify-es": "^3.3.9"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1"
   }
 }

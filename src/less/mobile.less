@@ -19,10 +19,10 @@
 	header{
 		z-index: 1001;
 		position: relative;
-		height: 100px;
+	    //height: 18vw;
 		&.flipped{
 			.flipper{
-				height: 100px;
+				height:15vw;
 			}
 		}
 		.flipper{
@@ -31,29 +31,30 @@
 			}
 		}
 		.front{
-			height: 100px;
+		    height: 18vw;
 			.logo{
-				padding-left:20.6%;
-				left: 8.54%;
+			    padding-left: 15vw;
+			    left: 8.54%;
+			    height: 16vw;
 			}
 			.text{
 				&.awards{
 					left: 32.5%;
-					font-size:30px;
+					font-size:6vw;
 
 				}
 				&.fyc{
 					left: 32.5%;
-					font-size:15px;
+					font-size:3vw;
 				}
 			}
 		}
 		.back{
-			height: 100px;
+			height: 15vw;
 			text-align:center;
 			.logo{
-			    height: 50px;
-			    padding-left: 200px;
+			    height:7vw;
+			    padding-left: 35vw;
 			    display: block;
 			    margin: 0 auto;
 			   
@@ -62,10 +63,12 @@
 				width: 100%;
 			    margin: 0;
 			    font-size: 16px;
-			   
+			   line-height: 16px;
+			   margin-bottom: 10px;
 			   
 			}
 			.text{
+				line-height: 16px;
 				&.awards{
 					font-size:12px;
 				}
@@ -81,7 +84,7 @@
 		//overflow: hidden;
 		//overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
-		min-height:calc(~'100% - 100px');
+		min-height:calc(~'100% - 15vw');
 		.page{
 			width: 100vw;
 			padding-top:0;
@@ -91,16 +94,16 @@
 			min-height:100%;
 			display: none;
 			.static{
-				width: 90%;
-				left: 5%;
+				width: 100%;
+				position: relative;
 				margin:20px auto 0;
 				
 				.menu{
 					padding:0;
-					width: 91%;
+					width: 90%;
 					margin: 0 auto;
 					.nav{
-						font-size:14PX;
+						font-size:16px;
 						display: flex;
 						flex-wrap:wrap;
 						justify-content:space-between;
@@ -132,6 +135,7 @@
 					.maker-photo{
 						vertical-align: top;
 						width: 100%;
+					    margin-bottom: 10px;
 					}
 					.bio{
 						width: 100%;
@@ -148,8 +152,9 @@
 				transform:translateX(100%);
 				width: 100vw;
 				display: none;
-			//	background-image:none !important;
+				background-image:none !important;
 				padding-top:42%;
+				position: relative;
 				&.on{
 					display: block;
 				}
@@ -165,50 +170,66 @@
 						font-size:48px;
 					}
 				}
-				&.landing{}
+				&.landing{
+					padding-top: 30px;
+				}
 				&.photos{
 					max-height:initial;
 				    padding-top: 0;
 			        height: 100%;
-			        .slider{
-			        	height: auto;
-		        	    top: 30%;
-    					//transform: translateY(-43%);
-    					.slide{
-    						height: 0;
-    						padding-top:22%;
-    					}
-			        }
-					.arrow{
-						transform: translateY(0%) scale(0.4);
-						&.right{
-							right:10px;
-						}
-						&.left{
-							left: 10px;
-						}
-					}
+			       .main{
+				       	width: 100%;
+	    				left: 0%;
+	    				top: 0;
+	    				position: relative;
+			       }
+			       .strip{
+			       		height: auto;
+			       		width: 90%;
+			       		left: 0%;
+			       		top: 0;
+			       		position: relative;
+			       		margin: 0 auto;
+			       		.slide{
+			       			
+			       			outline-width: 1px;
+			       			&.active{
+			       				outline-width: 1px;
+			       			}
+			       		}
+			       }
+				}
+				.close-btn{
+					display: none;
 				}
 				&.clips{
 					padding-top:0;
 					overflow:hidden;
+					position: absolute;
+					.close-btn{
+						display: block;
+					}
 				}
 				&.filmmakers{
-					 padding-top: 201px;
+					 padding-top:240px;
 					 background-attachment: fixed;
 				}
 			}
 		}
 		.bird-karma{
+			 background-image: url(../img/bird-karma/bk-bg.jpg);
 			.logo{
 				width: 100%;
 				padding-top:26%;
 			}
 			.subpage{
 				min-height:100%;
+				
 				&.landing{
 					overflow:hidden;
 					background-position:72%;
+				   
+
 					.laurels{
 						width:90%;
 						right:0%;
@@ -228,9 +249,25 @@
 					}
 				}
 				&.photos{
-					background-image: url(../img/bird-karma/landing-bg.jpg);
-				    background-size: cover;
+					
+				   background-size: cover;
 			       background-position:85%;
+
+			       .strip{
+
+			       		.slide{
+		       			  	width: 30%;
+	       			        padding-top: 15%;
+						    margin-right: 2%;
+						    margin-bottom: 1%;
+		       			   &:last-child{
+   	 							margin-right: 2%;
+   	 						}
+			       		}
+			       }
+				}
+				&.filmmakers{
+					padding-top: 63px;
 				}
 			}
 
@@ -239,7 +276,9 @@
 			}
 		}
 		.bilby{
-			
+			 background: url(../img/bilby/landing-bg.jpg) no-repeat;
+            background-size: auto 180%;
+			background-position: top;
 			.static{
 				.logo{
 					margin:0 auto 0;
@@ -248,9 +287,9 @@
 			}
 
 			.subpage{
-				
+				background-image: none;
 				&.filmmakers{
-				    padding-top: 230px;
+				    padding-top: 33vw;
 			        background-size: auto;
 			        background-position: top;
 				}
@@ -272,16 +311,15 @@
 					}
 				}
 				&.photos{
-			        background: url(../img/bilby/landing-bg.jpg) no-repeat;
-		            background-size: auto 180%;
-   	 				background-position: top;
-   	 				.slider{
+			       
+   	 				.strip{
    	 					.slide{
-   	 						&:nth-child(1){
-   	 							background-position:right;
-   	 						}
-   	 						&:nth-child(3){
-   	 							background-position:left;
+   	 						width: 30%;
+	       			        padding-top: 15%;
+						    margin-right: 2%;
+						    margin-bottom: 1%;
+   	 						&:last-child{
+   	 							margin-right: 1%;
    	 						}
    	 					}
    	 				}
@@ -289,10 +327,9 @@
 			}
 		}
 		.home{
-			
-			padding-top: 0px;
 			min-height:initial;
 			display: block;
+			position: relative;
 			h3{
 				margin-top:30px;
 			}
@@ -312,6 +349,36 @@
 				}
 				&#bird-karma{
 					margin-right:auto;
+				}
+			}
+		}
+	}
+	.copyright{
+		position: relative;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+}
+@media screen and (max-width:375px){
+	header{
+		height: 100px;
+		.front{
+
+		}
+		.back{
+			height: 100px;
+			.logo{
+				padding-left: 54vw;
+				height: 12vw;
+			}
+		}
+	}
+	.content{
+		min-height: calc(~'100% - 100px');
+		.bilby{
+			.subpage{
+				&.filmmakers{
+				  // padding-top: 70vw;
 				}
 			}
 		}

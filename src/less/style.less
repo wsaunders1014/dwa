@@ -174,7 +174,7 @@ header{
 			&.fyc{
 				font-weight:bold;
 				left: 40.5%;
-				top: 56.1%;
+				top: 58.8%;
 				font-size:1.97vw;
 
 			}
@@ -355,52 +355,97 @@ header{
     			}
     		}
     		&.photos{
-    			overflow: hidden;
-				//max-height:~'calc(100% - 6vw)';
-			    top: 0;
-			    height: 100%;
-			    background-color: #000000bf;
-			    background-image: none;
-			    z-index: 1001;
-    			.slider{
-    				height: 80%;
-    				text-align:left;
-    				position: absolute;
-    				top: 10%;
+    			
+			  	
+			    .main {
+		    	    width: 49vw;
+				    height: 42vh;
+				    margin:0 auto 0;
+			       	position: absolute;
+				    top: 20vh;
+				    left: 25.5vw;
+			    	img{
+				    	height:auto;
+				    	width: auto;
+				    	max-width: 100%;
+				    	max-height: 100%;
+				    	margin:auto;
+				    	display: block;
+			    	    position: absolute;
+					    top: 0;
+					    left: 0;
+					    right: 0;
+					    bottom: 0;
+					    box-shadow: 4px 4px 7px 5px #00000050;
+				    }
+			    }
+			    .strip{
+			    	display: block;
+			    	width:100%;
+			    	height: 4vw;
+	    	        margin: 0;
+				    position: absolute;
+				    top: 69vh;
+			    	.slide{
+			    		display: inline-block;
+			    		cursor: pointer;
+			    		max-height: 100%;
+			    		width: auto;
+			    		height: 100%;
+			    		margin: 0 10px 0 0;
+			    		outline: 3px solid #fff;
+			    		transition: transform 0.5s;
+			    		background-size: cover;
+			    		&.active{
+			    			outline: 3px solid #1a3464;
+			    		}
+			    		&:hover{
+			    			transform:scale(1.1);
+			    		}
+			    		&:last-child{
+			    			margin-right: 0;
+			    		}
+			    	}
+			    }
+    			// .slider{
+    			// 	height: 80%;
+    			// 	text-align:left;
+    			// 	position: absolute;
+    			// 	top: 10%;
     				
     				
-    				.slide {
-    					display: inline-block;
+    			// 	.slide {
+    			// 		display: inline-block;
     					
-					    height: auto;
-					   vertical-align: middle;
-    				}
+					  //   height: auto;
+					  //  vertical-align: middle;
+    			// 	}
 
-    			}
-    			.arrow{
-				    top: 50%;
-    				transform: translateY(-50%);
-    				width: 51px;
-    				height: 88px;
-    				position: absolute;
-    				background-repeat:no-repeat;
-    				background-size:51px 176px;
-    				cursor: pointer;
-    				&.disabled{
-    					display: none;
-    				}
-    				&:hover{
-    					background-position:0 -88px;
-    				}
-    				&.left{
-    					background-image:url(../img/left-arrow-white.png);
-    					left: 38px;
-    				}
-    				&.right{
-    					background-image:url(../img/right-arrow-white.png);
-    					right:38px;
-    				}
-    			}
+    			// }
+    			// // .arrow{
+				   //  top: 50%;
+    			// 	transform: translateY(-50%);
+    			// 	width: 51px;
+    			// 	height: 88px;
+    			// 	position: absolute;
+    			// 	background-repeat:no-repeat;
+    			// 	background-size:51px 176px;
+    			// 	cursor: pointer;
+    			// 	&.disabled{
+    			// 		display: none;
+    			// 	}
+    			// 	&:hover{
+    			// 		background-position:0 -88px;
+    			// 	}
+    			// 	&.left{
+    			// 		background-image:url(../img/left-arrow-white.png);
+    			// 		left: 38px;
+    			// 	}
+    			// 	&.right{
+    			// 		background-image:url(../img/right-arrow-white.png);
+    			// 		right:38px;
+    			// 	}
+    			// }
     			
     		}
     		&.clips{
@@ -542,7 +587,15 @@ header{
 			background-size:cover;
 			background-position:center 80%;
 		}
-		.photos{
+		.subpage.photos{
+			background: url(../img/bilby/bilby-bg.jpg) no-repeat;
+			background-size:cover;
+			background-position:center 80%;
+			.strip{
+				.slide{
+				    width: 8.3vw;
+				}
+			}
 			.slider{
 				width:1000%;
 				.slide{
@@ -604,8 +657,14 @@ header{
 		.filmmakers{
 			background-image:url(../img/bird-karma/bk-bg.jpg);
 		}
-		.photos{
-			
+		.subpage.photos{
+			background-image:url(../img/bird-karma/bk-bg.jpg);
+			background-position:center;
+			.strip{
+				.slide{
+					width: 6.33%;
+				}
+			}
 			.slider{
 				width: 1200%;
 				

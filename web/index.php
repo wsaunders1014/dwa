@@ -6,7 +6,7 @@
 
 <title>DreamWorks Animation Shorts FYC 2018</title>
 
-<link rel="stylesheet" type="text/css" href="/css/7b52b62c3b-style.min.css">
+<link rel="stylesheet" type="text/css" href="/css/16b3cb199d-style.min.css">
 
 </head>
 <body>
@@ -113,15 +113,18 @@
 				<div class="close-btn">+</div>
 			</div>
 			<div class="photos subpage">
-				<div class="slider">
-					<?php for($i=1;$i<13;$i++){
-						echo "<img class='slide' src='../img/bird-karma/photo-$i.jpg'>";
+				<div class="main">
+					<img src="../img/bird-karma/photo-1.jpg">
+				</div>
+				<div class="strip">
+					<?php for($i=1;$i<11;$i++){
+						echo "<div class='slide".(($i==1) ? " active":"")."' src='../img/bilby/photo-$i.jpg' style='background-image:url(../img/bilby/photo-$i.jpg)'></div>";
 					} ?>
 			
 					
 				</div>
-				<div class="arrow left disabled"></div>
-					<div class="arrow right"></div>
+			<!-- 	<div class="arrow left disabled"></div>
+					<div class="arrow right"></div> -->
 				<div class="close-btn">+</div>
 				
 			</div>
@@ -238,14 +241,25 @@
 				<div class="close-btn">+</div>
 			</div>
 			<div class="photos subpage">
-				<div class="slider">
+				<div class="main">
+					<img src="../img/bilby/photo-1.jpg">
+				</div>
+				<div class="strip">
 					<?php for($i=1;$i<11;$i++){
+						echo "<div class='slide".(($i==1) ? " active":"")."' src='../img/bilby/photo-$i.jpg' style='background-image:url(../img/bilby/photo-$i.jpg)'></div>";
+					} ?>
+			
+					
+				</div>
+				<!-- <div class="slider"> -->
+
+				<!-- 	<?php for($i=1;$i<11;$i++){
 						echo "<img class='slide' src='../img/bilby/photo-$i.jpg'>";
 					} ?>
 					
 				</div>
 				<div class="arrow left disabled"></div>
-				<div class="arrow right"></div>
+				<div class="arrow right"></div> -->
 				<div class="close-btn">+</div>
 				<!-- <div class="number">1</div> -->
 			</div>
@@ -274,6 +288,6 @@
 		<img src="/img/bird-karma/bird-karma_tt2.png">
 	</div>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<script src="/js/7b52b62c3b-scripts.min.js"></script>
+	<script src="/js/16b3cb199d-scripts.min.js"></script>
 </body>
 </html>

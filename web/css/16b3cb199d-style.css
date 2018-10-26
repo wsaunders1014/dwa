@@ -138,7 +138,7 @@ header .front .text {
 header .front .text.fyc {
   font-weight: bold;
   left: 40.5%;
-  top: 56.1%;
+  top: 58.8%;
   font-size: 1.97vw;
 }
 header .front .text.awards {
@@ -299,48 +299,55 @@ header .back .text.awards {
   margin: 0 2px 5px;
   min-width: 188px;
 }
-.content .page .subpage.photos {
-  overflow: hidden;
-  top: 0;
-  height: 100%;
-  background-color: #000000bf;
-  background-image: none;
-  z-index: 1001;
-}
-.content .page .subpage.photos .slider {
-  height: 80%;
-  text-align: left;
+.content .page .subpage.photos .main {
+  width: 49vw;
+  height: 42vh;
+  margin: 0 auto 0;
   position: absolute;
-  top: 10%;
+  top: 20vh;
+  left: 25.5vw;
 }
-.content .page .subpage.photos .slider .slide {
-  display: inline-block;
+.content .page .subpage.photos .main img {
   height: auto;
-  vertical-align: middle;
-}
-.content .page .subpage.photos .arrow {
-  top: 50%;
-  transform: translateY(-50%);
-  width: 51px;
-  height: 88px;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  display: block;
   position: absolute;
-  background-repeat: no-repeat;
-  background-size: 51px 176px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: 4px 4px 7px 5px #00000050;
+}
+.content .page .subpage.photos .strip {
+  display: block;
+  width: 100%;
+  height: 4vw;
+  margin: 0;
+  position: absolute;
+  top: 69vh;
+}
+.content .page .subpage.photos .strip .slide {
+  display: inline-block;
   cursor: pointer;
+  max-height: 100%;
+  width: auto;
+  height: 100%;
+  margin: 0 10px 0 0;
+  outline: 3px solid #fff;
+  transition: transform 0.5s;
+  background-size: cover;
 }
-.content .page .subpage.photos .arrow.disabled {
-  display: none;
+.content .page .subpage.photos .strip .slide.active {
+  outline: 3px solid #1a3464;
 }
-.content .page .subpage.photos .arrow:hover {
-  background-position: 0 -88px;
+.content .page .subpage.photos .strip .slide:hover {
+  transform: scale(1.1);
 }
-.content .page .subpage.photos .arrow.left {
-  background-image: url(../img/left-arrow-white.png);
-  left: 38px;
-}
-.content .page .subpage.photos .arrow.right {
-  background-image: url(../img/right-arrow-white.png);
-  right: 38px;
+.content .page .subpage.photos .strip .slide:last-child {
+  margin-right: 0;
 }
 .content .page .subpage.clips {
   z-index: 1003;
@@ -461,10 +468,18 @@ header .back .text.awards {
   background-size: cover;
   background-position: center 80%;
 }
-.content .bilby .photos .slider {
+.content .bilby .subpage.photos {
+  background: url(../img/bilby/bilby-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center 80%;
+}
+.content .bilby .subpage.photos .strip .slide {
+  width: 8.3vw;
+}
+.content .bilby .subpage.photos .slider {
   width: 1000%;
 }
-.content .bilby .photos .slider .slide {
+.content .bilby .subpage.photos .slider .slide {
   width: 8%;
   margin: 0 1%;
 }
@@ -509,10 +524,17 @@ header .back .text.awards {
 .content .bird-karma .filmmakers {
   background-image: url(../img/bird-karma/bk-bg.jpg);
 }
-.content .bird-karma .photos .slider {
+.content .bird-karma .subpage.photos {
+  background-image: url(../img/bird-karma/bk-bg.jpg);
+  background-position: center;
+}
+.content .bird-karma .subpage.photos .strip .slide {
+  width: 6.33%;
+}
+.content .bird-karma .subpage.photos .slider {
   width: 1200%;
 }
-.content .bird-karma .photos .slider .slide {
+.content .bird-karma .subpage.photos .slider .slide {
   width: 6.3333333%;
   margin: 0 1%;
 }
@@ -546,20 +568,19 @@ header .back .text.awards {
     clear: both;
   }
   .content .page .static .logo {
-    float: left;
+    margin: 10px auto;
   }
   .content .page .static .menu {
-    float: left;
     padding: 0;
-    margin-left: 4%;
   }
   .content .page .static .menu .nav {
     font-size: 18px;
+    display: flex;
+    justify-content: space-evenly;
   }
   .content .page .static .menu .nav > li {
     display: inline-block;
     vertical-align: top;
-    margin-right: 5%;
   }
   .content .page .static .menu .nav > li.current {
     padding-left: 0;
@@ -591,14 +612,13 @@ header .back .text.awards {
     font-size: 13px;
   }
   .content .bilby .static {
-    margin-left: 4vw;
+    margin-left: 0vw;
   }
   .content .bilby .static .logo {
-    width: 20%;
+    width: 40%;
     padding-top: 10%;
   }
   .content .bilby .static .menu {
-    float: left;
     margin-left: 6%;
     margin-top: 3%;
     width: 74%;
@@ -618,15 +638,15 @@ header .back .text.awards {
     max-width: initial;
   }
   .content .bird-karma .static {
-    margin-left: 4vw;
+    margin: 0 auto;
   }
   .content .bird-karma .static .logo {
-    width: 30%;
-    padding-top: 8%;
+    width: 50%;
+    padding-top: 14%;
   }
   .content .bird-karma .static .menu {
-    margin-top: 3%;
-    width: 66%;
+    margin: 1% auto 0;
+    width: 90%;
   }
   .content .bird-karma .static .menu .nav > li.current {
     text-shadow: 0px 0px 1px #f1b208;
@@ -643,7 +663,7 @@ header .back .text.awards {
   .content .bird-karma .landing .laurels {
     width: 66%;
     max-width: inherit;
-    top: 18%;
+    top: 21%;
   }
 }
 @media screen and (max-width:736px) {
@@ -664,37 +684,37 @@ header .back .text.awards {
   header {
     z-index: 1001;
     position: relative;
-    height: 100px;
   }
   header.flipped .flipper {
-    height: 100px;
+    height: 15vw;
   }
   header .flipper .front,
   header .flipper .back {
     box-shadow: 0px 5px 14px 5px #00000054;
   }
   header .front {
-    height: 100px;
+    height: 18vw;
   }
   header .front .logo {
-    padding-left: 20.6%;
+    padding-left: 15vw;
     left: 8.54%;
+    height: 16vw;
   }
   header .front .text.awards {
     left: 32.5%;
-    font-size: 30px;
+    font-size: 6vw;
   }
   header .front .text.fyc {
     left: 32.5%;
-    font-size: 15px;
+    font-size: 3vw;
   }
   header .back {
-    height: 100px;
+    height: 15vw;
     text-align: center;
   }
   header .back .logo {
-    height: 50px;
-    padding-left: 200px;
+    height: 7vw;
+    padding-left: 35vw;
     display: block;
     margin: 0 auto;
   }
@@ -702,6 +722,11 @@ header .back .text.awards {
     width: 100%;
     margin: 0;
     font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 10px;
+  }
+  header .back .text {
+    line-height: 16px;
   }
   header .back .text.awards {
     font-size: 12px;
@@ -713,7 +738,7 @@ header .back .text.awards {
     height: auto;
     padding-top: 0px;
     -webkit-overflow-scrolling: touch;
-    min-height: calc(100% - 100px);
+    min-height: calc(100% - 15vw);
   }
   .content .page {
     width: 100vw;
@@ -723,17 +748,17 @@ header .back .text.awards {
     display: none;
   }
   .content .page .static {
-    width: 90%;
-    left: 5%;
+    width: 100%;
+    position: relative;
     margin: 20px auto 0;
   }
   .content .page .static .menu {
     padding: 0;
-    width: 91%;
+    width: 90%;
     margin: 0 auto;
   }
   .content .page .static .menu .nav {
-    font-size: 14PX;
+    font-size: 16px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -765,6 +790,7 @@ header .back .text.awards {
   .content .page .col.right > div .maker-photo {
     vertical-align: top;
     width: 100%;
+    margin-bottom: 10px;
   }
   .content .page .col.right > div .bio {
     width: 100%;
@@ -779,7 +805,9 @@ header .back .text.awards {
     transform: translateX(100%);
     width: 100vw;
     display: none;
+    background-image: none !important;
     padding-top: 42%;
+    position: relative;
   }
   .content .page .subpage.on {
     display: block;
@@ -794,35 +822,51 @@ header .back .text.awards {
   .content .page .subpage.clips .close-btn {
     font-size: 48px;
   }
+  .content .page .subpage.landing {
+    padding-top: 30px;
+  }
   .content .page .subpage.photos {
     max-height: initial;
     padding-top: 0;
     height: 100%;
   }
-  .content .page .subpage.photos .slider {
+  .content .page .subpage.photos .main {
+    width: 100%;
+    left: 0%;
+    top: 0;
+    position: relative;
+  }
+  .content .page .subpage.photos .strip {
     height: auto;
-    top: 30%;
+    width: 90%;
+    left: 0%;
+    top: 0;
+    position: relative;
+    margin: 0 auto;
   }
-  .content .page .subpage.photos .slider .slide {
-    height: 0;
-    padding-top: 22%;
+  .content .page .subpage.photos .strip .slide {
+    outline-width: 1px;
   }
-  .content .page .subpage.photos .arrow {
-    transform: translateY(0%) scale(0.4);
+  .content .page .subpage.photos .strip .slide.active {
+    outline-width: 1px;
   }
-  .content .page .subpage.photos .arrow.right {
-    right: 10px;
-  }
-  .content .page .subpage.photos .arrow.left {
-    left: 10px;
+  .content .page .subpage .close-btn {
+    display: none;
   }
   .content .page .subpage.clips {
     padding-top: 0;
     overflow: hidden;
+    position: absolute;
+  }
+  .content .page .subpage.clips .close-btn {
+    display: block;
   }
   .content .page .subpage.filmmakers {
-    padding-top: 201px;
+    padding-top: 240px;
     background-attachment: fixed;
+  }
+  .content .bird-karma {
+    background-image: url(../img/bird-karma/bk-bg.jpg);
   }
   .content .bird-karma .logo {
     width: 100%;
@@ -853,16 +897,35 @@ header .back .text.awards {
     min-width: 48%;
   }
   .content .bird-karma .subpage.photos {
-    background-image: url(../img/bird-karma/landing-bg.jpg);
     background-size: cover;
     background-position: 85%;
+  }
+  .content .bird-karma .subpage.photos .strip .slide {
+    width: 30%;
+    padding-top: 15%;
+    margin-right: 2%;
+    margin-bottom: 1%;
+  }
+  .content .bird-karma .subpage.photos .strip .slide:last-child {
+    margin-right: 2%;
+  }
+  .content .bird-karma .subpage.filmmakers {
+    padding-top: 63px;
+  }
+  .content .bilby {
+    background: url(../img/bilby/landing-bg.jpg) no-repeat;
+    background-size: auto 180%;
+    background-position: top;
   }
   .content .bilby .static .logo {
     margin: 0 auto 0;
     padding-top: 26%;
   }
+  .content .bilby .subpage {
+    background-image: none;
+  }
   .content .bilby .subpage.filmmakers {
-    padding-top: 230px;
+    padding-top: 33vw;
     background-size: auto;
     background-position: top;
   }
@@ -882,21 +945,19 @@ header .back .text.awards {
     width: 46%;
     min-width: initial;
   }
-  .content .bilby .subpage.photos {
-    background: url(../img/bilby/landing-bg.jpg) no-repeat;
-    background-size: auto 180%;
-    background-position: top;
+  .content .bilby .subpage.photos .strip .slide {
+    width: 30%;
+    padding-top: 15%;
+    margin-right: 2%;
+    margin-bottom: 1%;
   }
-  .content .bilby .subpage.photos .slider .slide:nth-child(1) {
-    background-position: right;
-  }
-  .content .bilby .subpage.photos .slider .slide:nth-child(3) {
-    background-position: left;
+  .content .bilby .subpage.photos .strip .slide:last-child {
+    margin-right: 1%;
   }
   .content .home {
-    padding-top: 0px;
     min-height: initial;
     display: block;
+    position: relative;
   }
   .content .home h3 {
     margin-top: 30px;
@@ -916,5 +977,25 @@ header .back .text.awards {
   }
   .content .home .poster#bird-karma {
     margin-right: auto;
+  }
+  .copyright {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 375px) {
+  header {
+    height: 100px;
+  }
+  header .back {
+    height: 100px;
+  }
+  header .back .logo {
+    padding-left: 54vw;
+    height: 12vw;
+  }
+  .content {
+    min-height: calc(100% - 100px);
   }
 }
